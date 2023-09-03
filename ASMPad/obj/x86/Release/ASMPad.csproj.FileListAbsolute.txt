@@ -1,0 +1,230 @@
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.Main.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.Properties.Resources.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.DocForm.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ASMPad.exe
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ASMPad.pdb
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ScintillaNet.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ScintillaNet.pdb
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.exe
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.pdb
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.AboutTool.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ASMPad.exe.config
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\de\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ja\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\ru\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\bin\Release\FileBrowser.DLL
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.CommandPrompt.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.ExplorerView.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormGoTo.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormHexEditor.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.HexEditor.strings.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\LoadTemp.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.Options.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.Output.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.Log.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.PatchDialog.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.SyntaxH.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.de.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ja.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ru.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.de.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ja.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ru.resources
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\de\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ja\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ru\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\ASMPad\ASMPad\obj\x86\Release\ASMPad.AddSnippet.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ASM.xml
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.exe.config
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.exe
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.pdb
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\de\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ja\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ru\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\FileBrowser.DLL
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ScintillaNet.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\bin\Release\ScintillaNet.pdb
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AboutTool.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AddSnippet.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.CommandPrompt.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ExplorerView.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormGoTo.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormHexEditor.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.HexEditor.strings.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.InputBox.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\LoadTemp.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Main.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Maps.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Options.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.PatchDialog.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Properties.Resources.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.DocForm.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ROMMap.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.de.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ja.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ru.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.de.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ja.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ru.resources
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\de\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ja\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ru\ASMPad.resources.dll
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.exe
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.pdb
+C:\Documents and Settings\Rayan\Desktop\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.SidePane.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ASM.xml
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.exe.config
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.exe
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ASMPad.pdb
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\de\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ja\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ru\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\FileBrowser.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\Microsoft.mshtml.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\ScintillaNet.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ResolveAssemblyReference.cache
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AboutTool.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AddSnippet.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.CommandPrompt.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.EmulatorPath.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ExplorerView.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormGoTo.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormHexEditor.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.HexEditor.strings.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.InputBox.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\LoadTemp.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Main.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Maps.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.PatchDialog.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Properties.Resources.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.DocForm.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ROMMap.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.SidePane.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.de.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ja.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ru.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.de.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ja.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ru.resources
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.read.1.tlog
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.write.1.tlog
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\de\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ja\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ru\ASMPad.resources.dll
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.exe
+D:\C#\Copy (6) of ASMPad\ASMPad\obj\x86\Release\ASMPad.pdb
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ASM.xml
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.exe.config
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.exe
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.pdb
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\de\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ja\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ru\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\FileBrowser.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\Microsoft.mshtml.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\ScintillaNet.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AboutTool.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AddSnippet.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.CommandPrompt.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.DocForm.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.EmulatorPath.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormGoTo.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormHexEditor.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.HexEditor.strings.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.InputBox.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\LoadTemp.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Main.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Maps.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.PatchDialog.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Properties.Resources.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ROMMap.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.SidePane.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.de.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ja.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ru.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.de.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ja.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ru.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\de\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ja\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ru\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.exe
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.pdb
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.exe.config
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.exe
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.pdb
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ASM.xml
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.exe
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ASMPad.pdb
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\de\ASMPad.resources.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ja\ASMPad.resources.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ru\ASMPad.resources.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\FileBrowser.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ScalablePictureBox.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\ScintillaNet.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\WeifenLuo.WinFormsUI.Docking.dll
+F:\Copy (16) of ASMPad\ASMPad\bin\Release\XPicbox.dll
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ResolveAssemblyReference.cache
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AboutTool.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.AddSnippet.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.CommandPrompt.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.DocForm.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.EmulatorPath.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormGoTo.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormHexEditor.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.HexEditor.strings.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.InputBox.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\LoadTemp.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Main.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Maps.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.PatchDialog.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.Properties.Resources.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.ROMMap.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.SidePane.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.de.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ja.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.ru.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.de.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ja.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFindCancel.ru.resources
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.read.1.tlog
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\GenerateResource.write.1.tlog
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\de\ASMPad.resources.dll
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ja\ASMPad.resources.dll
+F:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ru\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\SNES.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\SNES.pdb
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\en\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormInsert.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\ASMPad.FormFind.en.resources
+D:\Copy (16) of ASMPad\ASMPad\obj\x86\Release\en\ASMPad.resources.dll
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.pdb
+D:\Copy (16) of ASMPad\ASMPad\bin\Release\Be.Windows.Forms.HexBox.xml

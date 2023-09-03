@@ -1,0 +1,202 @@
+;==========
+;New Sprite
+;==========
+
+print "INIT", pc
+	RTL
+
+print "MAIN", pc
+	PHB
+	PHK
+	PLB
+	JSR Run
+	PLB
+	RTL
+
+Run:
+	RTL
+
+;Include GetDrawInfo and SubOffScreen into the sprite.
+;=========================================================
+
+
+DATA_03B75C:
+db $0C,$1C
+DATA_03B75E:
+db $01,$02
+
+GetDrawInfo:
+STZ $186C,X
+STZ $15A0,X
+LDA $E4,X
+CMP $1A
+LDA $14E0,X
+SBC $1B
+BEQ ADDR_03B774
+INC $15A0,X
+ADDR_03B774:
+LDA $14E0,X
+XBA
+LDA $E4,X
+REP #$20
+SEC
+SBC $1A
+CLC
+ADC #$0040
+CMP #$0180
+SEP #$20
+ROL
+AND #$01
+STA $15C4,X
+BNE ADDR_03B7CF
+LDY #$00
+LDA $1662,X
+AND #$20
+BEQ ADDR_03B79A
+INY
+ADDR_03B79A:
+LDA $D8,X
+CLC
+ADC DATA_03B75C,Y
+PHP
+CMP $1C
+ROL $00
+PLP
+LDA $14D4,X
+ADC #$00
+LSR $00
+SBC $1D
+BEQ ADDR_03B7BA
+LDA $186C,X
+ORA DATA_03B75E,Y
+STA $186C,X
+ADDR_03B7BA:
+DEY
+BPL ADDR_03B79A
+LDY $15EA,X
+LDA $E4,X
+SEC
+SBC $1A
+STA $00
+LDA $D8,X
+SEC
+SBC $1C
+STA $01
+RTS
+
+ADDR_03B7CF:
+PLA
+PLA
+RTS
+SPR_T12:             
+    db $40,$B0
+SPR_T13:             
+    db $01,$FF
+SPR_T14:             
+    db $30,$C0,$A0,$C0,$A0,$F0,$60,$90
+    db $30,$C0,$A0,$80,$A0,$40,$60,$B0
+SPR_T15:             
+    db $01,$FF,$01,$FF,$01,$FF,$01,$FF
+    db $01,$FF,$01,$FF,$01,$00,$01,$FF
+
+SubOffScreen:
+STZ $03
+
+START_SUB:
+JSR SUB_IS_OFF_SCREEN
+BEQ RETURN_35
+LDA $5B
+AND #$01
+BNE VERTICAL_LEVEL
+LDA $D8,x
+CLC
+ADC #$50
+LDA $14D4,x
+ADC #$00
+CMP #$02
+BPL ERASE_SPRITE
+LDA $167A,x
+AND #$04
+BNE RETURN_35
+LDA $13
+AND #$01
+ORA $03
+STA $01
+TAY
+LDA $1A
+CLC
+ADC SPR_T14,y
+ROL $00
+CMP $E4,x
+PHP
+LDA $1B
+LSR $00
+ADC SPR_T15,y
+PLP
+SBC $14E0,x
+STA $00
+LSR $01
+BCC SPR_L31
+EOR #$80
+STA $00
+SPR_L31:             
+LDA $00
+BPL RETURN_35
+ERASE_SPRITE:
+LDA $14C8,x
+CMP #$08
+BCC KILL_SPRITE
+LDY $161A,x
+CPY #$FF
+BEQ KILL_SPRITE
+LDA #$00
+STA $1938,y
+KILL_SPRITE:         
+STZ $14C8,x
+RETURN_35:           
+RTS
+
+VERTICAL_LEVEL:
+LDA $167A,x
+AND #$04
+BNE RETURN_35
+LDA $13
+LSR A
+BCS RETURN_35
+LDA $E4,x
+CMP #$00
+LDA $14E0,x
+SBC #$00
+CMP #$02
+BCS ERASE_SPRITE
+LDA $13
+LSR A
+AND #$01
+STA $01
+TAY
+LDA $1C
+CLC
+ADC SPR_T12,y
+ROL $00
+CMP $D8,x
+PHP
+LDA $001D
+LSR $00
+ADC SPR_T13,y
+PLP
+SBC $14D4,x
+STA $00
+LDY $01
+BEQ SPR_L38
+EOR #$80
+STA $00
+SPR_L38:
+LDA $00
+BPL RETURN_35
+BMI ERASE_SPRITE
+
+SUB_IS_OFF_SCREEN:
+LDA $15A0,x
+ORA $186C,x
+RTS
+;The routines are automatically replaced when you save or assemble the file.

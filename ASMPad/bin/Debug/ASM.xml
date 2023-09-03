@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScintillaNET>
+  <!--This is what you set the Language property to-->
+  <Language Name="TRASM">
+
+    <!--Indentation width and indentation type-->
+    <Indentation TabWidth="4" SmartIndentType="cpp" />
+
+    <!--Comment characters and the lexer to use-->
+    <Lexer LexerName="VB" LineCommentPrefix=";" StreamCommentPrefix="--[[ " StreamCommentSuffix=" ]]" >
+      <Keywords List="0" Inherit="False">
+        <!--Insert highlighted keywords here-->
+      </Keywords>
+    </Lexer>
+  </Language>
+</ScintillaNET>

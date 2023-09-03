@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Snippets>
+  <Snippet name="[Sprite] Face Mario">
+    <SnippetCode>      
+      JSR SUB_HORZ_POS    ;\ 
+      TYA                 ; | Sprite faces Mario.
+      STA $157C,x         ; / Make sure you have SUB_HORZ_POS called.
+    </SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Reset Game">
+    <SnippetCode>
+      ;Reset the game.
+      STZ $4200
+      SEI
+      SEP #$30
+      LDA #$FF
+      STA $2141
+      LDA #$00
+      PHA
+      PLB
+      STZ $420C
+      JML $008016
+    </SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Hex To Dec (long)">
+    <SnippetCode>
+HexDecLoop:
+	LDX #$00
+	LDY #$00
+LoopY:
+	CMP #$64
+	BCC LoopX
+	SBC #$64
+	INY
+	BRA LoopY
+LoopX:
+	CMP #$0A
+	BCC Return
+	SBC #$0A
+	INX		
+	BRA LoopX
+Return:
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Teleport">
+    <SnippetCode>	LDA #$06             ;/ Teleport the player to screen destination.
+	STA $71
+	STZ $88
+	STZ $89
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Block] Shatter Block">
+    <SnippetCode>	LDA #$02
+	STA $9C
+	JSL $00BEB0
+	PHB
+	LDA #$02
+	PHA
+	PLB
+	LDA #$00             ; Set to 01 for rainbow explosion.
+	JSR $028663
+	PLB
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Activate Level Exit">
+    <SnippetCode>	;Activate the level exit.
+	;For secret exit, add the following uncomment the 2 lines of code:
+	;LDA #$01
+	;STA $141C
+	DEC $13C6
+	LDA #$FF
+	STA $1493
+	STA $0DDA
+	LDA #$0B
+	STA $1DFB
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Disable Cape Flight">
+    <SnippetCode>	STZ $149F
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Check Mario block direction">
+    <SnippetCode>	LDA $9A
+	AND #$08
+	BNE Right
+Left:
+	;[Left code here]
+	RTL
+Right:
+	;[Right code here]
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Flash Mario">
+    <SnippetCode>	LDA $13
+	AND #$03
+	BNE NotReg
+	REP #$20
+	LDA #$B2C8
+	JMP store
+NotReg:
+	CMP #$01
+	BNE NotFire
+	REP #$20
+	LDA #$B2F0
+	JMP store
+NotFire:
+	CMP #$02
+	BNE NotLuigi
+	REP #$20
+	LDA #$B2DC
+	JMP store
+NotLuigi:
+	REP #$20
+	LDA #$B304
+store:
+	STA $0D82
+	SEP #$20
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Hex To Dec (short)">
+    <SnippetCode>HexDec:
+	LDX #$00
+Loops:
+	CMP #$0A
+	BNE Return
+	SBC #$0A
+	INX
+	BRA Loops
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Layer 2 Priority">
+    <SnippetCode>LDA #$02 	; push Layer 2
+STA $212C 	; to mainscreen
+LDA #$1D 	; and all other layers, plus sprites
+STA $212D 	; to subscreen
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Lose Yoshi">
+    <SnippetCode>LOSEYOSHI:	
+	PHA
+	LDA $187A
+	BEQ NOYOSHI
+	PHX
+	PHY
+	LDX $18E2
+	LDA #$10
+	STA $163D,x
+	LDA #$03
+	STA $1DFA
+	LDA #$13
+	STA $1DFC
+	LDA #$02
+	STA $C1,x
+	STZ $187A
+	STZ $0DC1
+	LDA #$C0
+	STA $7D
+	STZ $7B
+	LDY $157B,x
+	PHX
+	TYX
+	LDA $02A4B3,x
+	PLX
+	STA $B5,x
+	STZ $1593,x
+	STZ $151B,x
+	STZ $18AE
+	LDA #$30
+	STA $1497
+	PLY
+	PLX
+NOYOSHI:
+	PLA
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Mario Star Flash">
+    <SnippetCode>PHX
+LDA $13
+	AND #$03
+	ASL
+	TAX
+	REP #$20
+	LDA Palettetable,x
+	STA $0D82
+	SEP #$20
+	PLX
+	RTL
+
+Palettetable:
+db $B2C8,$B2F0,$B2DC,$B304
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Obscure Mario">
+    <SnippetCode>	LDA #$FF            ;\ 
+	STA $78             ;/ Obscure Mario.  
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Upward Fireballs">
+    <SnippetCode>	LDA #$8F
+	STA $1745
+	STA $1746
+	STZ $174F
+	STZ $1750 
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Use JSL With RTS">
+    <SnippetCode>	PHK		;Preserve Program Bank.
+	PER $0006	
+	PEA $8020	;This is the location of a PLB RTL in the bank you JSL to.
+	JML $xxxxxx	;The place to JSL to, that ends in an RTS instead of RTL.
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Sprite Position To Mario Position">
+    <SnippetCode>	;Store sprite's position to Mario's position.
+	LDA $E4,x
+	STA $94
+	LDA $14E0,x
+	STA $95
+	LDA $D8,x
+	STA $96
+	LDA $14D4,x
+	STA $97 
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Spawn Normal Sprite">
+    <SnippetCode>	;Spawn a normal sprite.
+	;Replace !SpriteNumber with the number of the sprite.
+	LDA $15A0,x
+	ORA $186C,x
+	BNE EndSpawn
+	JSL $02A9DE
+	BMI EndSpawn
+	LDA #$01
+	STA $14C8,y
+	LDA #!SpriteNumber
+	STA $009E,y
+	LDA $E4,x
+	STA $00E4,y
+	LDA $14E0,x
+	STA $14E0,y
+	LDA $D8,x
+	STA $00D8,y
+	LDA $14D4,x
+	STA $14D4,y
+	PHX
+	TYX
+	JSL $07F7D2
+	PLX
+EndSpawn:
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Spawn Extended Sprite">
+    <SnippetCode>;Spawn an extended sprite.
+;!ExSpriteNumber being the sprite number.
+GenExtra:
+	LDY #$07
+	ExtraLoop:
+	LDA $170B,y
+	BEQ Extra1
+	DEY
+	BPL ExtraLoop
+	RTS
+Extra1:
+	LDA #!ExSpriteNumber
+	STA $170B,y
+	LDA $E4,x
+	STA $171F,y
+	LDA $14E0,x
+	STA $1733,y
+	LDA $D8,x
+	STA $1715,y
+	LDA $14D4,x
+	STA $1729,y
+	LDA #!ExSpriteYSpeed
+	STA $173D,y
+	LDA #!ExSpriteXSpeed
+	STA $1747,y
+	LDA #$FF
+	STA $176F,y
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Mario Position To Sprite Position">
+    <SnippetCode>	;Store Mario's position to sprite's position.
+	LDA $94
+	STA $E4,x
+	LDA $95
+	STA $14E0,x
+	LDA $96
+	STA $D8,x
+	LDA $97
+	STA $14D4,x
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Sprite Wrapper">
+    <SnippetCode>	PHB
+	PHK
+	PLB
+	JSR Run
+	PLB
+	RTL
+
+Run:
+	
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Generate Bullets">
+    <SnippetCode>GenBullets:
+	PHK
+	PER NoGGen-1
+	PEA $F80E	;\ Push 16-bit RTL address.
+	JML $02B07C	;/ Jump to the bullet generation code.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Generate Fire">
+    <SnippetCode>GenFire:
+	PHK
+	PER NoGGen2-1
+	PEA $F80E
+	JML $02B036
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Generate Parabombs">
+    <SnippetCode>GenParaBomb:
+	LDA $14
+	AND #$7F ; Frequency. Can be 7F or FF.
+	BNE NoGGen4
+	JSL $02A9DE
+	BMI NoGGen4
+	TYX
+	LDA #$08
+	STA $14C8,x
+	JSL $01ACF9
+	LSR
+	LDA #$40
+	STA $9E,x
+	PHK
+	PER NoGGen4-1
+	PEA $F80E	;\ Push 16-bit RTL address.
+	JML $02B34D	;/ Jump to the bullet generation code.
+NoGGen4:
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Fade To Overworld">
+    <SnippetCode>	LDA #!OWExit	; 01 -&gt; Normal exit, 02 -&gt; Secret Exit.
+	TAX 
+	LDA $0DD5
+	BEQ Skip
+	BPL NoFade
+Skip: 
+	TXA
+	STA $13CE
+	STA $0DD5
+	INC $1DE9
+	LDA #$0B
+	STA $0100
+NoFade: 
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Vertical Wavy Motion">
+    <SnippetCode>	PHY ; Push Y in case something messes it up.
+	LDA $14 ; Get the sprite frame counter ..
+	LSR A ; 7F
+	LSR A ; 3F ; Tip: LSR #3.
+	LSR A ; 1F
+	AND #$07 ; Loop through these bytes.
+	TAY ; Into Y.
+	LDA WavySpd,y ; Load Y speeds ..
+	STA $AA,x
+	JSL $01801A ; Update, with no gravity.
+	PLY ; Pull Y.
+	RTS
+
+WavySpd: db $00,$F8,$F2,$F8,$00,$08,$0E,$08
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Don't Face Mario">
+    <SnippetCode>	JSR SUB_HORZ_POS ; Make him face Mario.
+	TYA ; Get the sprite's direction relative to Mario into A.
+	EOR #$01 ; Why is this needed??
+	STA $157C,x ; Store new direction.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Darken Screen">
+    <SnippetCode>	LDA #!Darkness	; Anywhere from 00-0E.
+	STA $0DAE
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Restore Brightness">
+    <SnippetCode>	LDA $0F		; Restore brightness.
+	STA $0DAE
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Event every 1s..">
+    <SnippetCode>	;This will allow you to launch an event after approximately 1 second.
+	LDA $13
+	AND #$3F
+	BNE _return
+	
+;Your code here.
+
+_return:
+	RTL ; Or RTS.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Toggle ON/OFF Switch">
+    <SnippetCode>	;Set 00 to make it OFF and 01 to set it ON
+	LDA $14AF
+	EOR #$01
+	STA $14AF
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Activate Silver POW">
+    <SnippetCode>	;Set the timer to #$FF.
+	LDA #$FF
+	STA $14AE
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Activate Blue POW">
+    <SnippetCode>	;Set the timer to #$FF.
+	LDA #$FF
+	STA $14AD
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Throw Extended Sprite">
+    <SnippetCode>	LDY #$07	; # of times to go through loop..
+-
+	LDA $170B,y	; Check to see ..
+	BEQ +		; .. If a slot is found.
+	DEY
+	BPL -		; Otherwise, loop.
+	RTS
++
+	LDA #$04	; This is the sprite to generate, see $170B for a full list.
+	STA $170B,y 	; Sprite = Hammer.
+	PHY
+	LDA $E4,x
+	LDY $76
+	CLC
+	ADC XGenPos,y
+	PLY
+	STA $171F,y	; Generate positions. (X Low, Y Low, X High, Y High).
+	;ADC #$00
+	LDA $14E0,x
+	STA $1733,y
+	LDA $D8,x
+	STA $1715,y
+	LDA $14D4,x
+	STA $1729,y
+	LDA #$C7
+	STA $173D,y ; Y speed.
+	PHY
+	LDY $157C,x
+	LDA ExSprSpd,y
+	PLY
+	STA $1747,y
+	LDA #$FF
+	STA $176F,y
+	LDA #!ExSound
+	STA $1DF9
++	RTS
+
+ExSprSpd: db $25,$DA
+XGenPos: db $02,$00-02
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Jump">
+    <SnippetCode>	;Note that this should use a timer to stop the sprite from flying up in the air..
+	LDA #!Height	; Anywhere from 80-FF.
+	STA $AA,x
+	JSL $01802A
+	LDA $157C,x
+	EOR #$01
+	STA $157C,x
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Patch] Disable OW Lives Counter">
+    <SnippetCode>;OW border hijack.
+;No freespace required.
+
+Header
+LoROM
+
+org $05DC01		;Prevents the OW border from showing the number of lives.
+	SEP #$20		;\
+	PLB		;|End the routine early.
+	RTL		;/
+org $04A530
+	db $FE		;Don't show the X next to Mario.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Flash through palettes">
+    <SnippetCode>;This code snippet will cause a sprite to flash between palettes.
+;Could be when a sprite is hurt or killed.
+;Place the routine after storing the sprite's properties to $0303,y.
+
+	LDA $14
+	AND #$07
+	PHX
+	TAX
+	LDA $0303,y
+	AND #$F1
+	ORA FlashTbl,x
+	STA $0303,y
+	PLX
+
+;Place this table after or before the graphics routine.
+FlashTbl:
+ db $08,$08,$0C,$0C,$0C,$06,$06,$06
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Proximity (vertical)">
+    <SnippetCode>;==================;
+;Proximity Vertical;
+;==================;
+
+;Store the proximity range to 02 and then all this routine, 00 is returned if it's not in range while 01 is returned if it's in range.
+
+ProxVert:
+	STA $02
+	LDA $D8,x		;\
+	SEC			; |
+	SBC $96			; |
+	PHA			; |
+	JSR SUB_VERT_POS		; | Check sprite range ..
+	PLA			; |
+	EOR DirFix,y		; |
+	CMP $02			; | ; If Range &gt; !Temp return. 
+	BCS +			; |
+	LDA #$01			; | A = #$01.
+	RTS			; |
++	LDA #$00			; | A = #$00 if not in range.
+	RTS			;/
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Proximity (horizontal)">
+    <SnippetCode>;=========================================;
+;Proximity (horizontal)		      
+;A will have 1 if the sprite is in range
+;Otherwise it's 0			     
+;=========================================;
+
+;Store the range to check from in 00, then jump to this routine.
+;E.g.
+;LDA #$12
+;STA $00
+;JSR Proximity
+
+DirTbl: db $F0,$10
+DirFix: db $FF,$00
+
+Proximity:
+	LDA $E4,x		;\
+	SEC			; |
+	SBC $94			; |
+	PHA			; |
+	JSR SUB_HORZ_POS	; | Check sprite range ..
+	PLA			; |
+	EOR DirFix,y		; |
+	CMP $00			; | If Range &gt; !Temp return.
+	BCC Picker		; | If in RANGE.. branch.
+	RTS			;/
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Draw Smoke">
+    <SnippetCode>DrawSmoke:
+	LDY #$03
+-
+	LDA $17C0,y
+	BEQ +
+	DEY
+	BPL -
+	RTS
++
+	LDA #$01
+	STA $17C0,y
+	LDA #$1C     
+	STA $17CC,y
+	LDA $D8,x
+	STA $17C4,y
+	LDA $E4,x
+	STA $17C8,y
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Kill Sprite (explosion)">
+    <SnippetCode>	LDA #$15
+	STA $1887	; shake the ground
+	LDA #$0D	;/
+	STA $9E,x	;\ Sprite = Bob-omb.
+	LDA #$08	;/
+	STA $14C8,x	;\ Set status for new sprite.
+	JSL $07F7D2	;/ Reset sprite tables (sprite becomes bob-omb)..
+	LDA #$01	;\ .. and flag explosion status.
+	STA $1534,x	;/
+	LDA #$40	;\ Time for explosion.
+	STA $1540,x
+	LDA #$09	;\
+	STA $1DFC	;/ Sound effect.
+	LDA #$1B
+	STA $167A,x
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Mario Animate">
+    <SnippetCode>;Loop through Mario images.
+
+	LDA $13
+	LSR #3		; More LSRs for a slower animation.
+	AND #$01		; 03 for 4 animations, 07 for 8, 0F for 16..
+	TAY
+	LDA MarImgs,y	; Load the images from a table.
+	STA $13E0
+	RTL
+	
+MarImgs:
+ db $01,$02,$03,$04	; Mario poses ($13E0). You can search a pose from Tools -&gt; Utilities -&gt; Find Player Pose.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Interact with other sprites">
+    <SnippetCode>JSL $018032	; Interact with other sprites..
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Touch Mario">
+    <SnippetCode>	JSL $01A7DC	; Interact with Mario.
+	BCC NoContact	; If there's no contact, return. You won't need this line if you're using default interaction.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Display contact raphics">
+    <SnippetCode>	JSL $01AB99	; Display contact graphics.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Mario in air?">
+    <SnippetCode>	LDA $77 		; Load Mario's direction status..
+	AND #$04 	; Bit 3..
+	BEQ InAir 	; If not set, Mario is in the air.
+
+;Mario on ground code here.
+
+InAir:
+
+;Mario in air code here.
+
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Is water level?">
+    <SnippetCode>	LDA $85 		; Water level flag ..
+	BEQ NotWater		; ..Not a water level if the flag is clear.
+
+;Is a water level.
+
+NotWater:
+
+;Not a water level.
+
+	RTL
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Shake ground + Stun Mario">
+    <SnippetCode>	LDA #$40		; Time to shake the ground. Can be from 00-FF.
+	STA $1887
+	LDA #$20
+	STA $18BD	; Time to stun Mario. Can be from 00-FF.
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Mario offscreen?">
+    <SnippetCode>	LDA $81
+	BNE Offscreen	; $81 is 255 when Mario is offscreen, and 00 if not.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Draw tiles on status bar">
+    <SnippetCode>	LDX #$05		; # of tiles to draw + 1
+Loop:
+	LDA Tiles,x
+	STA $0EF9,x	; Store tiles to location. ($0EF9-$0F2F)
+	DEX
+	BPL Loop		; If X == 00, return.
+	RTL
+
+Tiles: 
+	db $0A,$0B,$0C,$0D,$0E,$0F ; This will draw "ABCDEF"
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Clear tiles on status bar">
+    <SnippetCode>	LDX #$05 	; loop size.
+Loop:
+	LDA #$FC 	; load blank tile
+	STA $addr,x	; address to clear, must be a valid address from $0EF9-$0F2F.
+	DEX
+	BPL Loop
+	RTL
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Earthquake!">
+    <SnippetCode>	LDA $1887
+	CMP #$30	 	; can be any value, just not 00.
+	BNE NoLoop
+	LDA #$FF
+	STA $1887 	; Make the ground shake timer FF if it's anything not 00.
+NoLoop:
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Check if XX seconds passed">
+    <SnippetCode>	LDA $13
+	AND #$3F			; No one cares about 3 frames
+	BNE NoInc
+	INC !RAM			; Note, this assumes !RAM = free ram and is 8 or 16-bit.
+NoInc:
+	LDA !RAM
+	CMP #$05			; how many seconds to check for (05 in this case).
+	BCC FiveSecondsPassed	; branches if defined time has passed.
+
+;XX seconds haven't passed.
+
+FiveSecondsPassed:
+
+;XX seconds have passed!
+
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Mario in water?">
+    <SnippetCode>	LDA $75 ; Check the water flag..
+	BEQ NotInWater
+	;Is in Water code.
+NotInWater:
+	;Not in water..
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Slippery level?">
+    <SnippetCode>	LDA $86 ; Check the slippery level flag..
+	BEQ NotSlippery
+	;slippery!
+NotSlippery:
+	;Not in slipperyness!
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Spawn Custom Sprite">
+    <SnippetCode>	LDA $15A0,x
+	ORA $186C,x
+	BNE EndSpawn
+	JSL $02A9DE
+	BMI EndSpawn
+	LDA #$01		; Sprite state ($14C8,x).
+	STA $14C8,y
+	PHX
+	TYX
+	LDA #!SpriteNumber	; This the sprite number to spawn.
+	STA $7FAB9E,x
+	PLX
+	LDA $E4,x
+	STA $00E4,y
+	LDA $14E0,x
+	STA $14E0,y
+	LDA $D8,x
+	STA $00D8,y
+	LDA $14D4,x
+	STA $14D4,y
+	PHX
+	TYX
+	JSL $07F7D2
+	JSL $0187A7
+	LDA #$08
+	STA $7FAB10,x
+	PLX
+EndSpawn:
+	RTS
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Check button press">
+    <SnippetCode>	LDA $16
+	AND #$08		; Button to press. Look at $15 for more info.
+	BEQ Skip
+;You pressed the button.
+Skip:
+;You didn't press the button.
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Display level message">
+    <SnippetCode>
+	;Display a message from a particular level.
+
+	LDA #$29 	; Level number. 00-24 is for level 24, for other levels, subtract the level number from $DF.
+	STA $13BF
+	LDA #$01		; Set to 02 for level message 2, or leave it as 01 for level message 01.
+	STA $1426
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Change Palette">
+    <SnippetCode>;NOTE: Execute this code in a H-Blank.
+	LDA #$32	; Palette number.
+	STA $2121
+	LDA #$53	; High byte?
+	STA $2122
+	LDA #$2E	; Low byte?
+	STA $2122
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Flicker Light">
+    <SnippetCode>	LDA $13 ; $13 -&gt; A.
+	LSR #3
+	AND #$07
+	TAY ; Into Y.
+	LDA Flipper,y
+	STA $0DAE
+	RTS
+
+Flipper: db $0E,$0A,$08,$06,$03,$00,$00,$00
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Remove carryable sprite">
+    <SnippetCode>Main:
+	LDA $1470
+	BEQ Return
+	PHX
+	LDX #$0B
+Loop:
+	LDA $14C8,x
+	CMP #$0B
+	BEQ Foundit
+	DEX
+	BPL Loop
+	PLX
+Return:
+	RTL
+	
+Foundit:
+	STZ $14C8,x
+	PLX
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Check if A is between 2 values">
+    <SnippetCode>CMP #$70
+BCS Skip
+CMP #$20
+BCC Skip
+
+;between 20 and 70
+
+Skip:
+RTL/RTS 
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] RNG ($13)">
+    <SnippetCode>	LDA $13
+	LSR
+	AND #$07
+	PHX
+	TAX
+	LDA RandValues,x
+	PLX
+	STA $9E,x 	; store any of the following sprites into $9e,x
+	JMP GenSprite 	; routine that generates sprites
+
+RandValues:
+	db $02,$04,$01,$03,$06,$05,$09,$08
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] RNG (by 1024)">
+    <SnippetCode>;============;
+;RNG by 1024
+;============;
+
+RANDOM:
+	PHX
+	PHP
+	SEP #$30
+	PHA
+	JSL $01ACF9
+	PLX
+	CPX #$FF
+	BNE NORMALRT
+	LDA $148B
+	BRA ENDRANDOM
+NORMALRT:
+	INX
+	LDA $148B
+	STA $4202
+	STX $4203
+	NOP #4
+	LDA $4217	
+ENDRANDOM:
+	PLP
+	PLX
+	RTL
+	
+;========;
+;USAGE
+;========;
+
+	LDA #$04		; Number of random values to use + 1.
+	JSL RANDOM
+	TAX 		; Transfer to X to use as an index
+	LDA RAND,x 	; A now has #$02, #$04, #$06, #$08 or #$10 (random value).
+	RTL
+
+RAND: 	db $02,$04,$06,$08,$10
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Update Sprite Speeds">
+    <SnippetCode>	JSL $01802A	; Update sprite speeds (Note: use this after modifying the X and Y speeds of the sprite).
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Disable horizontal scrolling">
+    <SnippetCode>	STZ $1411	; Disable horizontal scrolling.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Branch on certain values">
+    <SnippetCode>ReturnValues:
+db $00,$01,$00,$00,$00,$01,$01,$01,$01,$01,$00,$01,$00,$00
+
+Check:
+	LDY $71
+	LDA ReturnValues,y
+	BNE Return
+;Matching values.
+Return:
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Sprite on left side of screen">
+    <SnippetCode>;Put the sprite on the left-side of the screen.
+	REP #$20 
+	LDA $1A 
+	SEP #$20 
+	STA $E4,x 
+	XBA 
+	STA $14E0,x
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Telecfg">
+    <SnippetCode>!TELEPORT_DEST = $010D 	;set this to where you want to head when you teleport
+!PROPERTIES = $00		;properties of the level (see $19D8,x).
+
+;Teleport to a level specified in this file.
+
+Telecfg:
+	LDA $5B
+	BEQ Horz
+	LDX $97
+	BRA Setup
+Horz:
+	LDX $95 		;mario X pos high
+Setup:
+	REP #$20
+	LDA #!TELEPORT_DEST
+	SEP #$20
+	STA $19B8,x 	;write exit table
+	XBA
+	ORA #$04 	;exit present
+	ORA #!PROPERTIES
+	STA $19D8,x 	;write high bit and properties
+
+Teleport:
+	LDA #$06 	;teleport
+	STA $71
+	STZ $89
+	STZ $88
+	RTS 		;return
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Check player">
+    <SnippetCode>LDA $0DB3	; Check the player
+BEQ Mario
+;Luigi!
+Mario:
+;Mario!
+RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Make sprite solid">
+    <SnippetCode>;Make sprite solid.
+;Note that this just calls a routine from the ROM, and it isn't very effective. Works though.
+	JSL $01B44F
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Change Map16 tile">
+    <SnippetCode>;============
+;Change Map16
+;============
+
+;Usage:
+	LDX #!Map16Number
+	JSR ChangeMap16
+	RTL
+
+;The code itself.
+
+	And here is the actual code itself:
+PrematureEnd:
+	PLX
+	PLY
+	PLB
+	PLP
+	RTS
+ChangeMap16:
+	PHP
+	SEP #$20
+	PHB
+	PHY
+	LDA #$00
+	PHA
+	PLB
+	REP #$30
+	PHX
+	LDA $9A
+	STA $0C
+	LDA $98
+	STA $0E
+	LDA #$0000
+	SEP #$20
+	LDA $5B
+	STA $09
+	LDA $1933
+	BEQ SkipShift
+	LSR $09
+SkipShift:
+	LDY $0E
+	LDA $09
+	AND #$01
+	BEQ LeaveXY
+	LDA $9B
+	STA $00
+	LDA $99
+	STA $9B
+	LDA $00
+	STA $99
+	LDY $0C
+LeaveXY:
+	CPY #$0200
+	BCS PrematureEnd
+	LDA $1933
+	ASL A
+	TAX
+	LDA $BEA8,x
+	STA $65
+	LDA $BEA9,x
+	STA $66
+	STZ $67
+	LDA $1925
+	ASL A
+	TAY
+	LDA [$65],y
+	STA $04
+	INY
+	LDA [$65],y
+	STA $05
+	STZ $06
+	LDA $9B
+	STA $07
+	ASL A
+	CLC
+	ADC $07
+	TAY
+	LDA [$04],y
+	STA $6B
+	STA $6E
+	INY
+	LDA [$04],y
+	STA $6C
+	STA $6F
+	LDA #$7E
+	STA $6D
+	INC A
+	STA $70
+	LDA $09
+	AND #$01
+	BEQ SwitchXY
+	LDA $99		
+	LSR A
+	LDA $9B
+	AND #$01
+	BRA CurrentXY
+SwitchXY:
+	LDA $9B
+	LSR A
+	LDA $99
+CurrentXY:
+	ROL A
+	ASL A
+	ASL A
+	ORA #$20
+	STA $04
+	CPX #$0000
+	BEQ NoAdd
+	CLC
+	ADC #$10
+	STA $04
+NoAdd:
+	LDA $98
+	AND #$F0
+	CLC
+	ASL A
+	ROL A
+	STA $05
+	ROL A
+	AND #$03
+	ORA $04
+	STA $06
+	LDA $9A
+	AND #$F0
+	REP 3 : LSR A
+	STA $04
+	LDA $05
+	AND #$C0
+	ORA $04
+	STA $07
+	REP #$20
+	LDA $09
+	AND #$0001
+	BNE LayerSwitch
+	LDA $1A
+	SEC
+	SBC #$0080
+	TAX
+	LDY $1C
+	LDA $1933
+	BEQ CurrentLayer
+	LDX $1E
+	LDA $20
+	SEC
+	SBC #$0080
+	TAY
+	BRA CurrentLayer
+LayerSwitch: 
+	LDX $1A
+	LDA $1C
+	SEC
+	SBC #$0080
+	TAY
+	LDA $1933
+	BEQ CurrentLayer
+	LDA $1E
+	SEC
+	SBC #$0080
+	TAX
+	LDY $20
+CurrentLayer:
+	STX $08
+	STY $0A
+	LDA $98
+	AND #$01F0
+	STA $04
+	LDA $9A
+	REP 4 : LSR A
+	AND #$000F
+	ORA $04
+	TAY
+	PLA
+	SEP #$20
+	STA [$6B],y
+	XBA
+	STA [$6E],y
+	XBA
+	REP #$20
+	ASL A
+	TAY
+	PHK
+	PER $0006
+	PEA $804C
+	JML $00C0FB
+	PLY
+	PLB
+	PLP
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Block] Shatter on sprite contact">
+    <SnippetCode>	LDA $0A 		;\
+	AND #$F0 	;| Update the position
+	STA $9A 		;| of the block
+	LDA $0B 		;| so it doesn't shatter
+	STA $9B 		;| where the players at
+	LDA $0C 		;|
+	AND #$F0 	;|
+	STA $98 		;|
+	LDA $0D 		;|
+	STA $99 		;/
+
+	LDA #$02 	; Replace block with blank tile
+	STA $9C
+	JSL $00BEB0
+
+	PHB
+	LDA #$02
+	PHA
+	PLB
+	LDA #$00 	;set to 0 for normal explosion, 1 for rainbow (throw blocks)
+	JSR $028663 	;breaking effect
+	PLB
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Stop level on certain screen (LR)">
+    <SnippetCode>;Note: this assumes the level goes from left to right.	
+	LDA $1B
+	CMP #$10 ; The screen number to stop at.
+	BNE $03
+	STZ $1411
+RTS
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Stop level at certain screen (RL)">
+    <SnippetCode>;Note: this assumes the level goes from right to left.	
+	REP #$20
+	LDA $1A
+	CMP #$1000 ; Screen number times 0x100
+	SEP #$20
+	BNE $03
+	STZ $1411
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Stop level at certain screen (TB)">
+    <SnippetCode>;If it's a vertical level moving from top to bottom:
+	LDA $1D
+	CMP #$10 ; screen number
+	BNE $03
+	STZ $1412
+	RTS
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Stop level at certain screen (BT)">
+    <SnippetCode>;If it's a vertical level moving from bottom to top:
+	REP #$20
+	LDA $1C
+	CMP #$1000 ; screen number times 0x100
+	SEP #$20
+	BNE $03
+	STZ $1412
+	RTS 
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Set Projectile X Speed">
+    <SnippetCode>!Type = $1747		;$1747 = Extended sprites,
+			;$B6 = Regular sprites.
+			;$182C = Minor extended sprites.
+	
+	STZ $00		;Initialize scratch RAM
+	LDA $76
+	CLC
+	ROR A
+	ROR A
+	EOR $7B
+	BPL +
+	LDA $7B
+	STA $00
++	LDA #$10
+	LDY $76
+	BNE +
+	EOR #$FF
+	INC A
++	CLC
+	ADC $00
+	STA !Type,x	;Store into whatever type.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Puff Smoke">
+    <SnippetCode>;This routine makes a puff smoke effect.
+Smoke:
+	LDA #$10		; \ Sound Effect.
+	STA $1DF9	; /
+	PHY
+DisplayGlitter:
+	LDA $7F
+	ORA $81
+	BNE Return55
+	LDY.B #$03		; \ Find free sprite effect slot
+LoopStart:			;  |
+	LDA.W $17C0,Y		;  |
+	BEQ CreateGlitter	;  | Branch if one found
+	DEY                     	;  |
+	BPL LoopStart           	; /
+Return55:
+	RTL	
+CreateGlitter:
+	LDA #$01           	;01 for Smoke
+	STA $17C0,Y
+	LDA $9A
+	AND #$F0
+	STA $17C8,Y
+	LDA $98
+	AND #$F0
+	STA $17C4,Y
+	LDA $1933
+	BEQ ADDR_00FD97
+	LDA $9A
+	SEC
+	SBC $26
+	AND #$F0
+	STA $17C8,Y
+	LDA $98
+	SEC
+	SBC $28
+	AND #$F0
+	STA $17C4,Y
+ADDR_00FD97:
+	LDA #$19
+	STA $17CC,Y
+	LDA #$02	;erase self
+	STA $9C
+	JSL $00BEB0	;generate blank block
+	PLY		;restore map16 high
+	RTL
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Bounce Mario">
+    <SnippetCode>;Bounce Mario
+;This code should be used when Mario jumps on a sprite.
+	
+	LDA $15		; Save controller state
+	PHA
+	ORA #$C0		; Set holding X/Y and A/B
+	STA $15
+	JSL $01AA33	; Set mario speed
+	PLA
+	STA $15
+	
+	JSR SUB_HORZ_POS
+	TYA
+	EOR #$01
+	TAY		
+	LDA t_BOUNCE,y	; \ Bounce away horizontally
+	STA $7B		; /
+	
+	JSL $01AB99	; Display contact graphic
+	LDA #$20
+	STA $1DF9
+	RTL
+	
+t_BOUNCE: 
+	db $E4,$1C	; Bounce X speeds.
+
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Block] Disappear Block">
+    <SnippetCode>	LDA #$02 	; Replace block with block # 1E6
+	STA $9C
+	JSL $00BEB0 	; Make the block disappear.
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Layer 3 scroll (left)">
+    <SnippetCode>	LDA $22		;\ Load layer 3 X-Position (low byte)
+	CLC		;| Clear carry flag
+	ADC #$01		;| Scrolling speed = 01
+	STA $22		;/ Store at layer 3 X-Position (low byte)
+
+	LDA $23		;\ Load layer 3 X-Position (high byte)
+	ADC #$00		;| Do nothing
+	STA $23		;| Store at layer 3 X-Position (high byte)
+	RTL		;/ Return
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Misc] Layer 3 scroll (right)">
+    <SnippetCode>	LDA $22		;\ Load layer 3 X-Position (low byte)
+	SEC		;| Clear carry flag
+	SBC #$01		;| Scrolling speed = 01
+	STA $22		;/ Store at layer 3 X-Position (low byte)
+
+	LDA $23		;\ Load layer 3 X-Position (high byte)
+	SBC #$00		;| Do nothing
+	STA $23		;| Store at layer 3 X-Position (high byte)
+	RTL		;/ Return
+</SnippetCode>
+  </Snippet>
+  <Snippet name="[Sprite] Sprite in air?">
+    <SnippetCode>	LDA $1588,x 	; Load sprite's direction status..
+	AND #$04 	; Bit 3..
+	BEQ InAir 	; If not set, Mario is in the air.
+;Sprite on ground code here.
+InAir:
+;Sprite in air code here.
+	RTL
+</SnippetCode>
+  </Snippet>
+
+<Snippet name="[Misc] Disable/hide statusbar">
+<SnippetCode>	;Skip SMW's IRQ stuff.
+	;Disables the status bar.
+	LDA #$01
+	STA $0D9B
+</SnippetCode>
+</Snippet>
+</Snippets>

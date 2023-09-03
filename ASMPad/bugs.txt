@@ -1,0 +1,4 @@
+Known bugs:
+
+- When you press Ctrl+G to enter an offset to jump to, you have to press enter twice for the OK button to be pressed.
+- Bold/Italic settings don't get updated on application load, so you have to manually update them through the syntax highlighter update button.

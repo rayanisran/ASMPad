@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{372BAD86-E501-41C0-B945-9025E9851EEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASMPad</RootNamespace>
+    <AssemblyName>ASMPad</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>blue.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.4.2.35581, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="FileBrowser, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\FileBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <HintPath>..\..\..\smwtool\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ScintillaNet, Version=2.2.3581.19319, Culture=neutral, PublicKeyToken=948d6c9751444115, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\Alfred\Desktop\ScintillaNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SNES">
+      <HintPath>C:\Documents and Settings\Alfred\My Documents\SNES\SNES\bin\Release\SNES.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\..\My Documents\Visual Studio 2010\Projects\IDE\IDE\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutTool.designer.cs">
+      <DependentUpon>AboutTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSnippet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSnippet.designer.cs">
+      <DependentUpon>AddSnippet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommandPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandPrompt.designer.cs">
+      <DependentUpon>CommandPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Def.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def.Designer.cs">
+      <DependentUpon>Def.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocForm.designer.cs">
+      <DependentUpon>DocForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmulatorPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmulatorPath.Designer.cs">
+      <DependentUpon>EmulatorPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexEditor\FormFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexEditor\FormFindCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexEditor\FormGoTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexEditor\FormHexEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexEditor\FormHexEditor.designer.cs">
+      <DependentUpon>FormHexEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexEditor\FormInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexEditor\FormInsert.Designer.cs">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maps.designer.cs">
+      <DependentUpon>Maps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RFH.cs" />
+    <Compile Include="HexEditor\ProgramHex.cs" />
+    <Compile Include="HexEditor\RecentFileHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HexEditor\RecentFileHandler.designer.cs">
+      <DependentUpon>RecentFileHandler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexEditor\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HexEditor\Util.cs" />
+    <Compile Include="LoadTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadTemp.designer.cs">
+      <DependentUpon>LoadTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatchDialog.designer.cs">
+      <DependentUpon>PatchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ROMMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ROMMap.designer.cs">
+      <DependentUpon>ROMMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SidePane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SidePane.designer.cs">
+      <DependentUpon>SidePane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TSRenderer.cs" />
+    <EmbeddedResource Include="AboutTool.resx">
+      <DependentUpon>AboutTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSnippet.resx">
+      <DependentUpon>AddSnippet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandPrompt.resx">
+      <DependentUpon>CommandPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def.resx">
+      <DependentUpon>Def.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocForm.resx">
+      <DependentUpon>DocForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmulatorPath.resx">
+      <DependentUpon>EmulatorPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFind.de.resx">
+      <DependentUpon>FormFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFind.en.resx">
+      <DependentUpon>FormFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFind.ja.resx">
+      <DependentUpon>FormFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFind.resx">
+      <DependentUpon>FormFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFind.ru.resx">
+      <DependentUpon>FormFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFindCancel.de.resx">
+      <DependentUpon>FormFindCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFindCancel.ja.resx">
+      <DependentUpon>FormFindCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFindCancel.resx">
+      <DependentUpon>FormFindCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormFindCancel.ru.resx">
+      <DependentUpon>FormFindCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormGoTo.resx">
+      <DependentUpon>FormGoTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormHexEditor.resx">
+      <DependentUpon>FormHexEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\FormInsert.resx">
+      <DependentUpon>FormInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexEditor\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadTemp.resx">
+      <DependentUpon>LoadTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maps.resx">
+      <DependentUpon>Maps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatchDialog.resx">
+      <DependentUpon>PatchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ROMMap.resx">
+      <DependentUpon>ROMMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SidePane.resx">
+      <DependentUpon>SidePane.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\finder.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="blue.ico" />
+    <Content Include="Icon.ico" />
+    <Content Include="Resources\def.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

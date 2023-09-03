@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SMW Memory Map - SMW Central</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Kieran Menor, p4plus2, wye, Ersanio, DaxterSpeed, Telinc1">		<script>!function(){var e=new Date;e.setTime(e.getTime()+1296e6),document.cookie="tz_offset="+e.getTimezoneOffset()+"; expires="+e.toGMTString()+"; path=/"}();</script>
+			<link rel="stylesheet" type="text/css" href="/assets/css/default.css?v=1692528818">
+		</head>
+	<body id="memorymap-body">
+		<input type="checkbox" id="mobile-menu">
+		<header id="user-menu">
+			<ul>
+							<li>
+					<a href="/?p=login">Login</a>
+				</li>
+				<li>
+					<a href="/?p=register">Register</a>
+				</li>
+						</ul>
+			<div id="mobile-menu-button"><label for="mobile-menu"><img src="/assets/images/icons/menu.svg" alt="Menu"></label></div>
+			<div class="mobile-break"></div>
+					<div class="time-display"><time datetime="2023-09-02T22:46:12">2023-09-02 10:46:12 PM</time></div>
+					<div id="search">
+				<form method="GET" action="https://www.google.com/search">
+					<input type="text" name="q" placeholder="Search…">
+					<input type="hidden" name="q" value="site:smwcentral.net">
+					<input type="submit" name="go" value="Go">
+				</form>
+			</div>
+			<div id="language-select">
+				Language…				<ul id="language-submenu" class="submenu">
+									<li class="active"><a>English</a></li>
+									<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;locale=fr-CA&amp;locale_token=uzvQwDWqfcZWQoOLKKg27KL25F6EescguppLLY9g">Français</a></li>
+									<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;locale=pt-BR&amp;locale_token=uzvQwDWqfcZWQoOLKKg27KL25F6EescguppLLY9g">Português</a></li>
+								</ul>
+			</div>
+		</header>
+		<header id="header">
+			<div class="header-background"></div>
+			<div class="header-shading"></div>
+			<a href="/?p=main"><img class="header-logo" src="/assets/images/logo.png" alt="SMW Central" title="SMW Central"></a>
+			<div class="header-boxes">
+								<aside class="header-textbox"><div class="smwcTip smwcTip-Overworld" title="Overworld"></div> Tip: Palettes 0-3 do not work correctly on the overworld unless you use LM's option to disable the event reveal animation.</aside>
+			</div>
+		</header>
+		<div id="user-list">
+			<div class="online-users">
+	<strong>14</strong> users online:	<span class="un-outer"><a href="/?p=profile&amp;id=55666" style="color: #7c60b0;" class="un">AntonioDosGames</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=48648" style="color: #7c60b0;" class="un">bravetoaster</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=43749" style="color: #f185c9;" class="un">Green</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=58326" style="color: #7c60b0;" class="un">LucaPlayz</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=25510" style="color: #97acef;" class="un">Mariotag1</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=41232" style="color: #97acef;" class="un">Mint</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=35216" style="color: #7c60b0;" class="un">NewPointless</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=60755" style="color: #7c60b0;" class="un">Sarcose</a></span>, <span class="un-outer"><span title="Staff Member" class="icon icon-staff"></span>&nbsp;<a href="/?p=profile&amp;id=46677" style="color: #bb812a;" class="un">Segment1Zone2</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=59098" style="color: #7c60b0;" class="un">sholmes</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=59000" style="color: #7c60b0;" class="un">Snowfool948</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=39992" style="color: #f185c9;" class="un">UlticraftMTT</a></span>, <span class="un-outer"><span title="Staff Member" class="icon icon-staff"></span>&nbsp;<a href="/?p=profile&amp;id=23118" style="color: #10a050;" class="un">xHF01x</a></span>, <span class="un-outer"><a href="/?p=profile&amp;id=203" style="color: #97acef;" class="un">Yoshi Master</a></span>	 - 	Guests: <strong>583</strong> 
+	 - 	Bots: <strong>150</strong></div>
+			<div class="user-stats">
+				Users: <strong>61,378</strong> (2,325 active)							<br>Latest user: <span class="un-outer"><a href="/?p=profile&amp;id=61380" style="color: #7c60b0;" class="un">CKJ1983</a></span>						</div>
+		</div>
+		<div id="main">
+			<nav id="main-menu">
+	
+<div class="box">
+	<h2>Menu</h2>
+	<div class="content">
+			<div id="site-menu" class="menu-section non-collapsible">
+			<header>
+				<h3>SMW Central</h3>
+			</header>
+			<ul class="menu-links">
+			<li><a href="/?p=main">Main Page</a></li><li><a href="/?p=news">News</a></li><li><a href="/?p=viewforum">Forums</a></li><li><a href="/?p=memberlist">Member List</a></li><li class="spacer"></li><li><a href="/?p=cms&amp;page=1417699-site-wide-general-behavior-rules-and-guidelines">Rules</a></li><li><a href="/?p=beginners">Beginners&#039; Guide</a></li><li><a href="/?p=cms&amp;page=1434479-discord">Discord</a></li><li><a href="/?p=cms&amp;page=1396725-meet-the-staff">Staff</a></li><li><a href="/?p=links">Links</a></li>			</ul>
+		</div>
+			<div id="smw-menu" class="menu-section non-collapsible">
+			<header>
+				<h3>Super Mario World</h3>
+			</header>
+			<ul class="menu-links">
+			<li><a href="/?p=section&amp;s=smwhacks">Hacks</a></li><li><a href="/?p=section&amp;s=sramdatabase">Savebase</a></li><li><a href="/?p=faq">F.A.Q.</a></li><li><a href="/?p=viewforum&amp;f=1939">Tutorials</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=tools">Tools</a></li><li><a href="/?p=onlinetools">Online Tools</a></li><li><a href="/?p=section&amp;s=smwgraphics">Graphics</a></li><li><a href="/?p=section&amp;s=smwmusic">Music</a></li><li><a href="/?p=section&amp;s=brrsamples">BRR Samples</a></li><li><a href="/?p=section&amp;s=smwblocks">Blocks</a></li><li><a href="/?p=section&amp;s=smwsprites">Sprites</a></li><li><a href="/?p=tweaks&amp;game=smw">Tweaks</a></li><li><a href="/?p=section&amp;s=smwpatches">Patches</a></li><li><a href="/?p=section&amp;s=uberasm">UberASM</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=documents">Documents</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=rom">ROM Map</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram">RAM Map</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=hijack">Hijack Map</a></li>			</ul>
+		</div>
+			<div id="yi-menu" class="menu-section non-collapsible">
+			<header>
+				<h3>SMW2: Yoshi&#039;s Island</h3>
+			</header>
+			<ul class="menu-links">
+			<li><a href="/?p=section&amp;s=yihacks">Hacks</a></li><li>Savebase</li><li><a href="/?p=faq&amp;page=1524970-getting-started">F.A.Q.</a></li><li><a href="/?p=viewforum&amp;f=25">Tutorials</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=tools">Tools</a></li><li><a href="/?p=section&amp;s=yimusic">Music</a></li><li><a href="/?p=section&amp;s=yipatches">Patches</a></li><li><a href="/?p=section&amp;s=spasm">SPASM</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=documents">Documents</a></li><li><a href="/?p=memorymap&amp;game=yi&amp;region=rom">ROM Map</a></li><li><a href="/?p=memorymap&amp;game=yi&amp;region=ram">RAM Map</a></li><li><a href="/?p=memorymap&amp;game=yi&amp;region=sram">SRAM Map</a></li>			</ul>
+		</div>
+			<div id="sm64-menu" class="menu-section non-collapsible">
+			<header>
+				<h3>Super Mario 64</h3>
+			</header>
+			<ul class="menu-links">
+			<li><a href="/?p=section&amp;s=sm64hacks">Hacks</a></li><li>Savebase</li><li>F.A.Q.</li><li><a href="/?p=viewforum&amp;f=64">Tutorials</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=tools">Tools</a></li><li><a href="/?p=section&amp;s=sm64textures">Textures</a></li><li><a href="/?p=section&amp;s=sm64music">Music</a></li><li class="spacer"></li><li><a href="/?p=section&amp;s=documents">Documents</a></li><li><a href="/?p=memorymap&amp;game=sm64&amp;region=rom">ROM Map</a></li><li><a href="/?p=memorymap&amp;game=sm64&amp;region=ram">RAM Map</a></li>			</ul>
+		</div>
+		</div>
+</div></nav>
+			<div id="memorymap-content">
+<h1 class="smw">SMW Memory Map</h1>
+
+<header class="top-line">
+	<p class="stats">Displaying <strong class="current-page">50</strong> out of <strong class="total">840</strong> addresses.</p>
+	<div class="actions">
+				<p>
+			View:
+					<strong class="current">moderated</strong>
+			| <a href="/?p=memorymap&u=1&game=smw" class="inline">waiting (20)</a>
+				</p>
+			</div>
+</header>
+<form action="/" method="GET" id="search-form">
+	<input type="hidden" name="p" value="memorymap">
+	<input type="hidden" name="game" value="smw">
+	<input type="hidden" name="u" value="0">
+	<div class="box">
+		<header>
+			<h2>Filter</h2>
+			<a id="result-link" class="search-script" href="#">Link</a>
+		</header>
+		<div class="content">
+			<div class="form">
+				<label class="row">
+					<div class="prompt">
+						<header>Address</header>
+						<p>Hexadecimal number for a partial address. 6-digit number for a full address. Use <span class="mono">-</span> to denote a range. Use <span class="mono">,</span> to list more than one address.</p>
+					</div>
+					<div class="field">
+						<input type="text" value="" id="search-address" name="address">
+						<div class="input-error"></div>
+					</div>
+				</label>
+				<label class="row">
+					<div class="prompt"><header>Length</header></div>
+					<div class="field">
+						<select name="sizeOperation" id="search-size-operation">
+							<option>=</option>
+							<option>!=</option>
+							<option>&gt;</option>
+							<option>&lt;</option>
+							<option>&gt;=</option>
+							<option>&lt;=</option>
+						</select>
+						<input type="number" min="1" name="sizeValue" value="" class="input-text" size="20" id="search-size-value">
+						<div class="input-error"></div>
+					</div>
+				</label>
+				<label class="row search-noscript" id="search-compoundtype">
+					<div class="prompt">
+						<header>Type</header>
+						<p>Enable JavaScript to use multiple regions.</p>
+					</div>
+					<div class="field">
+						<select name="compoundtype">
+							<option value="*:*">All Addresses</option>
+																							<optgroup label="RAM">
+									<option value="ram:*" selected>Any</option>
+																			<option value="ram:Misc.">Misc.</option>
+																			<option value="ram:Empty">Empty</option>
+																			<option value="ram:Sprites">Sprites</option>
+																			<option value="ram:Player">Player</option>
+																			<option value="ram:Yoshi">Yoshi</option>
+																			<option value="ram:Blocks">Blocks</option>
+																			<option value="ram:I/O">I/O</option>
+																			<option value="ram:Graphics">Graphics</option>
+																			<option value="ram:Counter">Counter</option>
+																			<option value="ram:Flag">Flag</option>
+																			<option value="ram:Timer">Timer</option>
+																			<option value="ram:Hardware mirror">Hardware mirror</option>
+																			<option value="ram:Pointer">Pointer</option>
+																			<option value="ram:Palettes">Palettes</option>
+																			<option value="ram:Overworld">Overworld</option>
+																			<option value="ram:Camera">Camera</option>
+																			<option value="ram:Should be 00">Should be 00</option>
+																	</optgroup>
+																							<optgroup label="ROM">
+									<option value="rom:*">Any</option>
+																			<option value="rom:Misc.">Misc.</option>
+																			<option value="rom:ASM">ASM</option>
+																			<option value="rom:Palette">Palette</option>
+																			<option value="rom:Mario tilemap">Mario tilemap</option>
+																			<option value="rom:Sprite tilemap related">Sprite tilemap related</option>
+																			<option value="rom:Layer 3">Layer 3</option>
+																			<option value="rom:Mario physics">Mario physics</option>
+																			<option value="rom:Level data">Level data</option>
+																			<option value="rom:Pointer">Pointer</option>
+																			<option value="rom:Mode 7 tilemap">Mode 7 tilemap</option>
+																			<option value="rom:Music">Music</option>
+																			<option value="rom:Sprite number">Sprite number</option>
+																			<option value="rom:Debug">Debug</option>
+																			<option value="rom:Sound effect">Sound effect</option>
+																			<option value="rom:Timer">Timer</option>
+																			<option value="rom:Graphics">Graphics</option>
+																			<option value="rom:Overworld border">Overworld border</option>
+																			<option value="rom:Empty">Empty</option>
+																			<option value="rom:Objects">Objects</option>
+																			<option value="rom:Subroutine (JSx FIXME)">Subroutine (JSx FIXME)</option>
+																			<option value="rom:Sprite Subroutine (JSx FIXME)">Sprite Subroutine (JSx FIXME)</option>
+																			<option value="rom:Sprite Misc.">Sprite Misc.</option>
+																			<option value="rom:Coordinate">Coordinate</option>
+																			<option value="rom:Level number">Level number</option>
+																			<option value="rom:Controller">Controller</option>
+																			<option value="rom:Overworld">Overworld</option>
+																			<option value="rom:Sprite physics">Sprite physics</option>
+																			<option value="rom:Stripe Image">Stripe Image</option>
+																			<option value="rom:Subroutine (JSR)">Subroutine (JSR)</option>
+																			<option value="rom:Subroutine (JSL)">Subroutine (JSL)</option>
+																			<option value="rom:Sprite subroutine (JSR)">Sprite subroutine (JSR)</option>
+																			<option value="rom:Sprite subroutine (JSL)">Sprite subroutine (JSL)</option>
+																	</optgroup>
+																							<optgroup label=" Regs">
+									<option value="regs:*">Any</option>
+																			<option value="regs:SNES Register (PPU)">SNES Register (PPU)</option>
+																			<option value="regs:SNES Register (APU)">SNES Register (APU)</option>
+																			<option value="regs:SNES Register (Hardware)">SNES Register (Hardware)</option>
+																			<option value="regs:SNES Register (Controller)">SNES Register (Controller)</option>
+																			<option value="regs:SNES Register (DMA)">SNES Register (DMA)</option>
+																			<option value="regs:SA-1 Register (Write)">SA-1 Register (Write)</option>
+																			<option value="regs:SA-1 Register (Read)">SA-1 Register (Read)</option>
+																			<option value="regs:Super FX Register">Super FX Register</option>
+																			<option value="regs:MSU-1 Register (Read)">MSU-1 Register (Read)</option>
+																			<option value="regs:MSU-1 Register (Write)">MSU-1 Register (Write)</option>
+																	</optgroup>
+																							<optgroup label="Hijack">
+									<option value="hijack:*">Any</option>
+																			<option value="hijack:Jump (JMP/JSR)">Jump (JMP/JSR)</option>
+																			<option value="hijack:Jump (JML/JSL)">Jump (JML/JSL)</option>
+																			<option value="hijack:16-bit Pointer">16-bit Pointer</option>
+																			<option value="hijack:24-bit Pointer">24-bit Pointer</option>
+																			<option value="hijack:Opcode">Opcode</option>
+																			<option value="hijack:Code">Code</option>
+																			<option value="hijack:Table">Table</option>
+																			<option value="hijack:Data">Data</option>
+																			<option value="hijack:Hex Edit">Hex Edit</option>
+																			<option value="hijack:Miscellaneous">Miscellaneous</option>
+																	</optgroup>
+																							<optgroup label="SRAM">
+									<option value="sram:*">Any</option>
+																			<option value="sram:Mario A">Mario A</option>
+																			<option value="sram:Mario B">Mario B</option>
+																			<option value="sram:Mario C">Mario C</option>
+																			<option value="sram:Backup">Backup</option>
+																	</optgroup>
+													</select>
+					</div>
+				</label>
+				<label class="row search-script">
+					<div class="prompt">
+						<header>Region</header>
+						<p>Hold control to select multiple. Check "All" to select all at once.</p>
+					</div>
+					<div class="field">
+						<select id="search-region" name="region" size="5" multiple>
+															<option value="ram" selected>RAM</option>
+															<option value="rom">ROM</option>
+															<option value="regs"> Regs</option>
+															<option value="hijack">Hijack</option>
+															<option value="sram">SRAM</option>
+													</select><br>
+						<input type="checkbox" id="search-region-all"><label for="search-region-all"> All</label>
+						<div class="input-error"></div>
+					</div>
+				</label>
+				<label class="row search-script">
+					<div class="prompt"><header>Type</header></div>
+					<div class="field">
+						<select id="search-type" name="type">
+							<option value="*" id="search-type-anchor">Any</option>
+						</select>
+					</div>
+				</label>
+								<label class="row">
+					<div class="prompt">
+						<header>Description</header>
+						<p>Separate each individual keyword with spaces. Surround a phrase with quotes to look for the exact phrase, or with <span class="mono">/</span> to use a <a href="http://php.net/manual/en/reference.pcre.pattern.syntax.php">PCRE regular expression</a>. Prepend with <span class="mono">-</span> to exclude a keyword or phrase, with <span class="mono">+</span> to require a whole word or phrase, or with <span class="mono">-+</span> to exclude a whole word or phrase. <span class="mono">?</span> matches any character, <span class="mono">*</span> matches any number of characters.</p>
+					</div>
+					<div class="field">
+						<input type="text" class="input-text" name="description" value="" size="60" id="search-description">
+					</div>
+				</label>
+			</div>
+			<div class="final-step">
+				<input type="submit" id="search-submit" value="Apply">
+				<input type="reset" id="search-reset" class="search-script" value="Reset">
+				<div class="spinner" id="search-spinner"></div>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div id="search-type-stash" style="display: none;" aria-hidden="true">
+	<optgroup label="RAM" class="transient" data-region="ram" data-order="0">
+					<option value="Misc.">Misc.</option>
+					<option value="Empty">Empty</option>
+					<option value="Sprites">Sprites</option>
+					<option value="Player">Player</option>
+					<option value="Yoshi">Yoshi</option>
+					<option value="Blocks">Blocks</option>
+					<option value="I/O">I/O</option>
+					<option value="Graphics">Graphics</option>
+					<option value="Counter">Counter</option>
+					<option value="Flag">Flag</option>
+					<option value="Timer">Timer</option>
+					<option value="Hardware mirror">Hardware mirror</option>
+					<option value="Pointer">Pointer</option>
+					<option value="Palettes">Palettes</option>
+					<option value="Overworld">Overworld</option>
+					<option value="Camera">Camera</option>
+					<option value="Should be 00">Should be 00</option>
+			</optgroup>
+	<optgroup label="ROM" class="transient" data-region="rom" data-order="1">
+					<option value="Misc.">Misc.</option>
+					<option value="ASM">ASM</option>
+					<option value="Palette">Palette</option>
+					<option value="Mario tilemap">Mario tilemap</option>
+					<option value="Sprite tilemap related">Sprite tilemap related</option>
+					<option value="Layer 3">Layer 3</option>
+					<option value="Mario physics">Mario physics</option>
+					<option value="Level data">Level data</option>
+					<option value="Pointer">Pointer</option>
+					<option value="Mode 7 tilemap">Mode 7 tilemap</option>
+					<option value="Music">Music</option>
+					<option value="Sprite number">Sprite number</option>
+					<option value="Debug">Debug</option>
+					<option value="Sound effect">Sound effect</option>
+					<option value="Timer">Timer</option>
+					<option value="Graphics">Graphics</option>
+					<option value="Overworld border">Overworld border</option>
+					<option value="Empty">Empty</option>
+					<option value="Objects">Objects</option>
+					<option value="Subroutine (JSx FIXME)">Subroutine (JSx FIXME)</option>
+					<option value="Sprite Subroutine (JSx FIXME)">Sprite Subroutine (JSx FIXME)</option>
+					<option value="Sprite Misc.">Sprite Misc.</option>
+					<option value="Coordinate">Coordinate</option>
+					<option value="Level number">Level number</option>
+					<option value="Controller">Controller</option>
+					<option value="Overworld">Overworld</option>
+					<option value="Sprite physics">Sprite physics</option>
+					<option value="Stripe Image">Stripe Image</option>
+					<option value="Subroutine (JSR)">Subroutine (JSR)</option>
+					<option value="Subroutine (JSL)">Subroutine (JSL)</option>
+					<option value="Sprite subroutine (JSR)">Sprite subroutine (JSR)</option>
+					<option value="Sprite subroutine (JSL)">Sprite subroutine (JSL)</option>
+			</optgroup>
+	<optgroup label=" Regs" class="transient" data-region="regs" data-order="2">
+					<option value="SNES Register (PPU)">SNES Register (PPU)</option>
+					<option value="SNES Register (APU)">SNES Register (APU)</option>
+					<option value="SNES Register (Hardware)">SNES Register (Hardware)</option>
+					<option value="SNES Register (Controller)">SNES Register (Controller)</option>
+					<option value="SNES Register (DMA)">SNES Register (DMA)</option>
+					<option value="SA-1 Register (Write)">SA-1 Register (Write)</option>
+					<option value="SA-1 Register (Read)">SA-1 Register (Read)</option>
+					<option value="Super FX Register">Super FX Register</option>
+					<option value="MSU-1 Register (Read)">MSU-1 Register (Read)</option>
+					<option value="MSU-1 Register (Write)">MSU-1 Register (Write)</option>
+			</optgroup>
+	<optgroup label="Hijack" class="transient" data-region="hijack" data-order="3">
+					<option value="Jump (JMP/JSR)">Jump (JMP/JSR)</option>
+					<option value="Jump (JML/JSL)">Jump (JML/JSL)</option>
+					<option value="16-bit Pointer">16-bit Pointer</option>
+					<option value="24-bit Pointer">24-bit Pointer</option>
+					<option value="Opcode">Opcode</option>
+					<option value="Code">Code</option>
+					<option value="Table">Table</option>
+					<option value="Data">Data</option>
+					<option value="Hex Edit">Hex Edit</option>
+					<option value="Miscellaneous">Miscellaneous</option>
+			</optgroup>
+	<optgroup label="SRAM" class="transient" data-region="sram" data-order="4">
+					<option value="Mario A">Mario A</option>
+					<option value="Mario B">Mario B</option>
+					<option value="Mario C">Mario C</option>
+					<option value="Backup">Backup</option>
+			</optgroup>
+</div>
+
+
+<div id="search-anchor"></div>
+<section class="box transient">
+	<header class="pagination">
+	<ul class="page-list"><li class="title">Pages:</li><li class="active">1</li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=2" data-query="page=2">2</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=3" data-query="page=3">3</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=4" data-query="page=4">4</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=5" data-query="page=5">5</a></li><li><select class="page-select"onchange="if(this.selectedIndex !== 0) window.location = this.dataset.url.replace('=-1', '=' + this.value);"data-url="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=-1" data-query="page=-1"><option>6–15</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option></select></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=16" data-query="page=16">16</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=17" data-query="page=17">17</a></li></ul>	<ul class="page-list">
+		<li class="title">Per Page:</li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=25" data-query="max=25">25</a></li>
+			<li class="active">50</li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=75" data-query="max=75">75</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=100" data-query="max=100">100</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=150" data-query="max=150">150</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=500" data-query="max=500">500</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=9223372036854775807" data-query="max=9223372036854775807">All</a></li>
+		</ul>
+</header>
+	<div class="content has-table"><table class="list">
+	<tbody>
+		<tr>
+					<th>RAM Address</th>
+			<th>Length</th>
+			<th>Type</th>
+					<th>Description</th>
+			<th>Details</th>
+						</tr>
+		</tbody>
+	<tbody>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0000">$7E0000</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E000F.">16 bytes</span></td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Scratch RAM, is and can be used for a big number of purposes. The general purpose is temporarily preserving a value for later use in a routine.<br>
+Of note is the following address, used in LM ASM hacks:<br>
+$7E:0003 (16-bit) - Block number from LM Map16 editor. Also used in the custom Map16 tile change routine.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0010">$7E0010</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Flag</td>
+							<td colspan="2" class="text">If the value in it is not zero, run the actual game; otherwise, loop forever. It's set to a non-zero value during NMI, and it's set to zero after the game mode has been run, so that the game runs exactly once a frame - one NMI trigger per frame.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0011">$7E0011</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Flag</td>
+							<td colspan="2" class="text">Used to distinguish IRQ #1 from IRQ #2's code. (Inside the Morton/Ludwig/Roy room, where IRQ is used twice, although it can be used in other areas that run IRQ as well.) #$00 = IRQ #1; #$01 = IRQ #2.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0012">$7E0012</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Graphics</td>
+							<td class="text">Stripe image loader - value must be divisible by 3.</td>
+							<td class="center">
+											<a href="/?p=memorymap&a=detail&game=smw&region=ram&detail=f4ec9a539a5b" data-modal="&lt;table class=&quot;table&quot;&gt;&lt;tr&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;/td&gt;&lt;td&gt;Default value. Uploads from $7F837D.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;/td&gt;&lt;td&gt;Title screen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;06&lt;/td&gt;&lt;td&gt;Overworld border&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;09&lt;/td&gt;&lt;td&gt;Remove text box&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0C&lt;/td&gt;&lt;td&gt;Continue? menu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0F&lt;/td&gt;&lt;td&gt;Cutscene BG: Cookie Mountain&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;12&lt;/td&gt;&lt;td&gt;1 or 2 Players? menu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;15&lt;/td&gt;&lt;td&gt;Overworld scroll arrows&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;18&lt;/td&gt;&lt;td&gt;Remove overworld scroll arrows&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1B&lt;/td&gt;&lt;td&gt;Remove various menus&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1E&lt;/td&gt;&lt;td&gt;Save? menu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;21&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 8: (Blank)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 7: travel to Donut Land.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 6: Together, they now&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2A&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 5: still trapped in an egg.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2D&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 4: Yoshi&amp;#039;s friend who is&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 3: castle #1 and rescued&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;33&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 2: demented Iggy Koopa in&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;Cutscene 1, Line 1: Mario has defeated the&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;39&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 8: Princess Toadstool?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3C&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 7: What will become of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3F&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 6: Mario in this new world?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 5: Dome. What traps await&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;45&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 4: the underground Vanilla&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;48&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 3: memory. The next area is&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4B&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 2: castle #2 is now just a&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4E&lt;/td&gt;&lt;td&gt;Cutscene 2, Line 1: Morton Koopa Jr. of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;51&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 8: (Blank)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;54&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 7: Green Switches yet?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;57&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 6: you found the Red and&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5A&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 5: more difficult. Have&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5D&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 4: starting to get much&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;60&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 3: #3. Mario&amp;#039;s quest is&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;63&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 2: Lemmy Koopa of castle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;66&lt;/td&gt;&lt;td&gt;Cutscene 3, Line 1: Mario has triumphed over&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;69&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 8: this perplexing forest.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6C&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 7: to solve the puzzle of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6F&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 6: Mario must use his brain&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;72&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 5: Illusion lies ahead.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;75&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 4: are over. The Forest of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;78&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 3: symphonies in castle #4&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7B&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 2: of composing Koopa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7E&lt;/td&gt;&lt;td&gt;Cutscene 4, Line 1: Ludwig von Koopa&amp;#039;s days&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;81&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 8: (Blank)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;84&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 7: tasty) Chocolate Island!&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;87&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 6: the dangerous (but&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8A&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 5: castle #5. Onward to&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8D&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 4: end to Roy Koopa of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;90&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 3: Illusion and has put an&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;93&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 2: through the Forest of&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;96&lt;/td&gt;&lt;td&gt;Cutscene 5, Line 1: Mario found his way&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;99&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 8: to the Valley of Bowser.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9C&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 7: appears to be a gateway&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9F&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 6: is a sunken ship that&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A2&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 5: now before him. There&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A5&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 4: the challenge that is&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A8&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 3: song. Mario must meet&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AB&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 2: #6 has sung her last&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AE&lt;/td&gt;&lt;td&gt;Cutscene 6, Line 1: Wendy O. Koopa in castle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B1&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 8: Dinosaur Land?&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B4&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 7: restore peace to&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B7&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 6: Can Mario rescue her and&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;BA&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 5: Toadstool is being held.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;BD&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 4: Castle where Princess&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C0&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 3: that is left is Bowser&amp;#039;s&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C3&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 2: Koopa in castle #7. All&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C6&lt;/td&gt;&lt;td&gt;Cutscene 7, Line 1: Mario has defeated Larry&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C9&lt;/td&gt;&lt;td&gt;Cutscene BG: Underground&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CC&lt;/td&gt;&lt;td&gt;Cutscene BG: Chocolate Island&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CF&lt;/td&gt;&lt;td&gt;Cutscene FG: Castle&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D2&lt;/td&gt;&lt;td&gt;Completely black&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D5&lt;/td&gt;&lt;td&gt;THE END&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D8&lt;/td&gt;&lt;td&gt;Lakitu et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DB&lt;/td&gt;&lt;td&gt;Hammer Brother et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DE&lt;/td&gt;&lt;td&gt;Sumo Brother et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E1&lt;/td&gt;&lt;td&gt;Banzai Bill et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E4&lt;/td&gt;&lt;td&gt;Dino-Rhino et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E7&lt;/td&gt;&lt;td&gt;Blargg et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;EA&lt;/td&gt;&lt;td&gt;Rip van Fish et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ED&lt;/td&gt;&lt;td&gt;Big Boo et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F0&lt;/td&gt;&lt;td&gt;Dry Bones et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F3&lt;/td&gt;&lt;td&gt;Fishbone et al. enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F6&lt;/td&gt;&lt;td&gt;Reznor enemy name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;F9&lt;/td&gt;&lt;td&gt;Mechakoopas enemy name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FC&lt;/td&gt;&lt;td&gt;Bowser/Koopa kids enemy names&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FF&lt;/td&gt;&lt;td&gt;Cutscene BG: Overworld&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="display: block;">Valid Values</a>
+									</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0013">$7E0013</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Counter</td>
+							<td colspan="2" class="text">"True" frame counter. Increments once per frame, except when the game is lagging. Note that $7E:0014 is better suited for most purposes.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0014">$7E0014</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Counter</td>
+							<td colspan="2" class="text">"Effective" frame counter. Stops when, for example, RAM addresses such as $7E:009D are not zero (lock sprite flag, usually indicates the player is dying, grabbing a powerup, or something similar). Inside sprite code, this address is often preferred over $7E:0013, especially in graphics routines, as graphics will not be updated when the player dies if this address is used as an index to the tilemap.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0015">$7E0015</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>I/O</td>
+							<td colspan="2" class="text">Controller buttons currently held down. Format: byetUDLR.<br>
+b = A or B; y = X or Y; e = select; t = Start; U = up; D = down; L = left, R = right.<!--AR: +button --></td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0016">$7E0016</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>I/O</td>
+							<td colspan="2" class="text">Controller buttons newly pressed this frame. Format: byetUDLR.<br>
+b = B only; y = X or Y; e = select; t = Start; U = up; D = down; L = left, R = right.<!--AR: +button --></td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0017">$7E0017</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>I/O</td>
+							<td colspan="2" class="text">Controller buttons currently held down. Format: axlr----.<br>
+a = A; x = X; l = L; r = R, - = null/unused.<!--AR: -unused +button --></td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0018">$7E0018</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>I/O</td>
+							<td colspan="2" class="text">Controller buttons newly pressed this frame. Format: axlr----.<br>
+a = A; x = X; l = L; r = R, - = null/unused.<!--AR: -unused +button --></td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0019">$7E0019</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Player</td>
+							<td class="text">Current player powerup status.</td>
+							<td class="center">
+											<a href="/?p=memorymap&a=detail&game=smw&region=ram&detail=33272a488e55" data-modal="&lt;table class=&quot;table&quot;&gt;&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;00&lt;/td&gt;&lt;td&gt;Small&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;01&lt;/td&gt;&lt;td&gt;Big&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;02&lt;/td&gt;&lt;td&gt;Cape&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;03&lt;/td&gt;&lt;td&gt;Fire&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="display: block;">Valid Values</a>
+									</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E001A">$7E001A</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E001B.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 1 X position, current frame. Mirror of SNES register $210D.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E001C">$7E001C</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E001D.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 1 Y position, current frame. Mirror of SNES register $210E.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E001E">$7E001E</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E001F.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 2 X position, current frame. Mirror of SNES register $210F.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0020">$7E0020</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0021.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 2 Y position, current frame. Mirror of SNES register $2110.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0022">$7E0022</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0023.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 3 X position. Mirror of SNES register $2111.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0024">$7E0024</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0025.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Layer 3 Y position. Mirror of SNES register $2112.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0026">$7E0026</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0027.">2 bytes</span></td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Depending on Layer 3 tides being activated or not, it's either:<br>
+<br>
+Not activated:<br>
+Layer 2 X position minus Layer 1 X position.<br>
+Activated:<br>
+Layer 3 X position minus Layer 1 X position.<br>
+<br>
+Used for various things, among which interaction with multiple layers is included.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0028">$7E0028</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0029.">2 bytes</span></td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Depending on Layer 3 tides being activated or not, it's either:<br>
+<br>
+Not activated:<br>
+Layer 2 Y position minus Layer 1 Y position.<br>
+Activated:<br>
+Layer 3 Y position minus Layer 1 Y position.<br>
+<br>
+Used for various things, among which interaction with multiple layers is included.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E002A">$7E002A</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E002B.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 Center X position. Mirror of SNES register $211F, + #$0080.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E002C">$7E002C</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E002D.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 Center Y position. Mirror of SNES register $2120, + #$0080.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E002E">$7E002E</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E002F.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 matrix parameter A. Mirror of SNES register $211B.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0030">$7E0030</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0031.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 matrix parameter B. Mirror of SNES register $211C.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0032">$7E0032</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0033.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 matrix parameter C. Mirror of SNES register $211D.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0034">$7E0034</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0035.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 matrix parameter D. Mirror of SNES register $211E.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0036">$7E0036</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0037.">2 bytes</span></td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Mode 7 rotation. Its values are calculated and stored into the respective Mode 7 parameter mirrors at $7E:002E through $7E:0035.<br>
+Values #$0000 through #$01FF are all different values, after that it's the same pattern - that is, if you add this 16-bit address with #$0200, there is a 360 degree rotation.<br>
+Furthermore, this address is used in the brown chained platform code as an index to the sine and cosine tables at $07:F7DB.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0038">$7E0038</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0039.">2 bytes</span></td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Mode 7 scaling; that is, making Layer 1 shrink or grow. Its values are calculated and stored into the respective Mode 7 parameter mirrors at $7E:002E through $7E:0035.<br>
+The first byte - $7E:0038 - is used for horizontal scaling, whereas the second byte - $7E:0039 - is used for vertical scaling.<br>
+Default value is #$20. The closer to #$00, the more the layer grows, the further from #$00, the more the layer shrinks. Value #$10 makes the layer twice as large as value #$20, value #$40 makes the layer twice as small as value #$20, etc.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E003A">$7E003A</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E003B.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 Layer 1 X position. Mirror of SNES register $210D.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E003C">$7E003C</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E003D.">2 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Mode 7 Layer 1 Y position. Mirror of SNES register $210E.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E003E">$7E003E</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Background mode select applied with IRQ below status bar (so the area above IRQ is not affected by this). Format: 4321pmmm.<br>
+4321 = Layer 1/2/3/4 uses 8x8 tiles when clear, 16x16 tiles when set; p = Layer 3 absolute priority (only in background mode 1); mmm = background mode # (0-7).<br>
+Mirror of SNES register $2105.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E003F">$7E003F</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">OAM Address, low byte. Also known as the mirror of SNES register $2102. High byte is at $00846B. Is sometimes used to alter priority of various sprite tiles, such as with the sprite backgrounds in the boss rooms.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0040">$7E0040</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">CGADSUB settings. Format: shbo4321.<br>
+s = 0 for adding color layer, 1 for subtracting color layer; h = half-color enable; b = backdrop enable; o = object (aka sprite) enable; 4321 = enable Layer 4, 3, 2, 1 (Layer 3 is only affected below the status bar). Mirror of SNES register $2131.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0041">$7E0041</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0043.">3 bytes</span></td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Window mask settings. These control which window is for which layer active as well as whether a window is inverted for that layer.<br>
+<br>
+Format of each register:<br>
+ABCDabcd<br>
+where<br>
+A/a: Enable window 2<br>
+B/b: Invert window 2<br>
+C/c: Enable window 1<br>
+D/d: Invert window 1<br>
+<br>
+Lower case apply for BG1, BG3 and OBJ (layer 1, 3 and sprites) and upper case apply for BG2, BG4 and COL (layer 2, 4 and colour 0 / fixed colour).<br>
+<br>
+$41 (mirror of W12SEL $2123) controls BG1 and BG2<br>
+$42 (mirror of W34SEL $2124) controls BG3 and BG4<br>
+$43 (mirror of WOBJSEL $2125) controls OBJ and COL</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0044">$7E0044</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Hardware mirror</td>
+							<td colspan="2" class="text">Color addition select.<br>
+Format: ccmm--sd.<br>
+cc = clip colors to black before math<br>
+mm = color math prevention<br>
+s = add subscreen (replaces fixed color)<br>
+d = enables direct color mode for 8bpp graphics (modes 3, 4, and 7)<br>
+<br>
+For cc and mm, the values they are set to determine when they apply: 00 = never, 01 = outside color window only, 10 = inside color window only, 11 = always.<br>
+<br>
+Mirror of SNES register $2130.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0045">$7E0045</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0046.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Column/row of Map16 tiles to use for VRAM upload when layer 1 is scrolling left/up. Its value is equal to $7E:001A (or $7E:001C if vertical) divided by #$10, minus #$08.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0047">$7E0047</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0048.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Column/row of Map16 tiles to use for VRAM upload when layer 1 is scrolling right/down. Its value is equal to $7E:001A (or $7E:001C if vertical) divided by #$10, plus #$17.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0049">$7E0049</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E004A.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Column/row of Map16 tiles to use for VRAM upload when interactive layer 2 is scrolling left/up. Its value is equal to $7E:001E (or $7E:0020 if vertical) divided by #$10 (16), minus #$08.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E004B">$7E004B</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E004C.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Column/row of Map16 tiles to use for VRAM upload when interactive layer 2 is scrolling right/down. Its value is equal to $7E:001E (or $7E:0020 if vertical) divided by #$10, plus #$17.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E004D">$7E004D</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E004E.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Last X/Y value of layer 1 where VRAM upload of Map16 tiles was performed when scrolling left/up.<br>
+The low 4 bits are forced to zero (AND #$FFF0) in order to get scroll values on a 16 pixel boundary.<br>
+It is used to determine if a VRAM update is necessary during scrolling.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E004F">$7E004F</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0050.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Last X/Y value of layer 1 where VRAM upload of Map16 tiles was performed when scrolling right/down.<br>
+The low 4 bits are forced to zero (AND #$FFF0) in order to get scroll values on a 16 pixel boundary.<br>
+It is used to determine if a VRAM update is necessary during scrolling.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0051">$7E0051</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0052.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Last X/Y value of interactive layer 2 where VRAM upload of Map16 tiles was performed when scrolling left/up.<br>
+The low 4 bits are forced to zero (AND #$FFF0) in order to get scroll values on a 16 pixel boundary.<br>
+It is used to determine if a VRAM update is necessary during scrolling.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0053">$7E0053</a>
+								</td>
+				<td class="nowrap"><span class="explain" title="Ends at $7E0054.">2 bytes</span></td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Last X/Y value of interactive layer 2 where VRAM upload of Map16 tiles was performed when scrolling right/down.<br>
+The low 4 bits are forced to zero (AND #$FFF0) in order to get scroll values on a 16 pixel boundary.<br>
+It is used to determine if a VRAM update is necessary during scrolling.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0055">$7E0055</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Direction of scrolling for Layer 1.<br>
+#$00 = left (or up); #$02 = right (or down).<br>
+Used to index the various camera tables at $7E0045 to $7E0048 and $7E004D to $7E0050.<br>
+<br>
+When handling routine $00F70D, it is set to $00 if the player's on-screen X position is less than the value of $142A and $02 otherwise. This is used to determine which side to enable spawning sprites depending which side the player is on compared to $142A.<br>
+<br>
+It is also temporarily set to #$01 during level load for loading onscreen sprites.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0056">$7E0056</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Camera</td>
+							<td colspan="2" class="text">Direction of scrolling for Layer 2.<br>
+#$00 = left (or up); #$02 = right (or down).<br>
+Used to index the various camera tables at $7E:0049 through $7E:004C and $7E:0051 through $7E:0054.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0057">$7E0057</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Blocks</td>
+							<td colspan="2" class="text">Used in the level loading code. It's the position within the subscreen.<br>
+Format: yyyyxxxx, where yyyy is the Y position (units of 16 pixels) and xxxx is the X position.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0058">$7E0058</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Empty</td>
+							<td colspan="2" class="text">Empty. Cleared on reset, titlescreen load and overworld load.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E0059">$7E0059</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Blocks</td>
+							<td colspan="2" class="text">Used in the level loading routine as an indicator for the size of the object, or extended object type depending on what object is being loaded. Could be used as scratch RAM (except in ObjecTool and similar codes).</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E005A">$7E005A</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Blocks</td>
+							<td colspan="2" class="text">Used in the level loading routine as  the object number. Could be used as scratch RAM (except in ObjecTool and similar codes).</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E005B">$7E005B</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Misc.</td>
+							<td colspan="2" class="text">Screen mode: CD----Vv.<br>
+C = Collision with layer 2.<br>
+D = Disable collision with layer 1.<br>
+V = Vertical layer 2.<br>
+v = Vertical layer 1.<br>
+- = unused.<br>
+<br>
+This address is set by a table at $05:8417, which is indexed by the level mode setting.</td>
+												</tr>
+					<tr>
+							<td>
+					<a class="mono" href="https://smwc.me/m/smw/ram/7E005C">$7E005C</a>
+								</td>
+				<td class="nowrap">1 byte</td>
+				<td>Empty</td>
+							<td colspan="2" class="text">Empty. Cleared on reset, titlescreen load and overworld load.</td>
+												</tr>
+			</tbody>
+	<tbody class="space"><tr></tr></tbody>
+</table>
+</div>
+	<header class="pagination">
+	<ul class="page-list"><li class="title">Pages:</li><li class="active">1</li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=2" data-query="page=2">2</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=3" data-query="page=3">3</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=4" data-query="page=4">4</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=5" data-query="page=5">5</a></li><li><select class="page-select"onchange="if(this.selectedIndex !== 0) window.location = this.dataset.url.replace('=-1', '=' + this.value);"data-url="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=-1" data-query="page=-1"><option>6–15</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option></select></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=16" data-query="page=16">16</a></li><li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;page=17" data-query="page=17">17</a></li></ul>	<ul class="page-list">
+		<li class="title">Per Page:</li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=25" data-query="max=25">25</a></li>
+			<li class="active">50</li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=75" data-query="max=75">75</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=100" data-query="max=100">100</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=150" data-query="max=150">150</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=500" data-query="max=500">500</a></li>
+			<li><a href="/?p=memorymap&amp;game=smw&amp;region=ram&amp;max=9223372036854775807" data-query="max=9223372036854775807">All</a></li>
+		</ul>
+</header>
+</section>
+<div id="details-scrim"></div>
+
+<div id="details-dialog" class="box">
+	<header><h2 class="label"></h2><span class="close">&#x2715;</span></header>
+	<div class="content details-body"></div>
+</div>
+</div>
+		</div>
+		<footer id="footer">
+			<div id="footer-box">
+				<p>
+					Views: <strong>1,139,059,879</strong><br>
+					<!-- TODO: <a href="stats.php">Site statistics</a> -->
+				</p>
+				<hr>
+				<p>
+					&copy;&nbsp;2005&ndash;2023 SMW Central<br>
+					<a href="/?p=cms&amp;page=1219789-legal-information">Legal Information</a> -
+					<a href="/?p=cms&amp;page=1148011-privacy-policy">Privacy Policy</a><br>
+									<a href="/?p=links">Affiliates (Link to us)</a><br>
+					<a href="/?p=cms&amp;page=1611253-open-source">Open Source</a>
+				</p>
+				<p class="affiliates">
+									<a href="https://www.smbxgame.com/" title="Super Mario Bros. X" rel="nofollow"><img src="/assets/images/affiliates/smbx.gif" alt="Super Mario Bros. X"></a>
+									<a href="https://www.romhacking.net/" title="ROMhacking.net" rel="nofollow"><img src="/assets/images/affiliates/rhdn.gif" alt="ROMhacking.net"></a>
+									<a href="https://www.mfgg.net/" title="Mario Fan Games Galaxy" rel="nofollow"><img src="/assets/images/affiliates/mfgg.gif" alt="Mario Fan Games Galaxy"></a>
+									<a href="https://sm64romhacks.com/" title="sm64romhacks" rel="nofollow"><img src="/assets/images/affiliates/sm64romhacks.png" alt="sm64romhacks"></a>
+								</p>
+						</div>
+		</footer>
+		<script defer src="/assets/js/page.js"></script>
+			<script defer src="/assets/js/pages/memorymap.js"></script>
+		</body>
+</html>

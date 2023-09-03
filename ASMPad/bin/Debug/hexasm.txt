@@ -1,0 +1,762 @@
+00	7	2	BRK #$xx{Software break.
+00	7	2	BRK{Software break.
+01	6	2	ORA ($xx,X){Performs the logical operator OR on an 8-bit address index by X.
+02	7	2	COP #$xx{Co-processor enable.
+02	7	2	COP{Co-processor enable.
+03	4	2	ORA $xx,S{Performs the logical operator OR on an 8-bit address indexed by the value in the stack.
+04	5	2	TSB $xx{The opposite of TSB. It will clear a bit. LDA #$80 : TRB $1F2C will clear bit 8 of $1F2C.
+05	3	2	ORA $xx{Used to set bits (e.g ORA #$80 sets the last bit). Also check if mutliple RAM Address are the same value (e.g. LDA $75 : ORA $85 : BEQ BothZero)
+06	5	2	ASL $xx{Multiply a RAM Address with $xx.
+07	6	2	ORA [$xx]{Performs the logical operator ORA on $xx.
+08	3	1	PHP{Push the nvmxdizc register.
+09	2	A	ORA #$xx{Performs the logical operator ORA with the constant. e.g. LDA #$12 : ORA #$06 will yield #$16.
+09	3	A	ORA #$xxxx{Performs the logical operator ORA with the constant. e.g. LDA #$12 : ORA #$06 will yield #$16.
+0A	2	1	ASL A{Multiply A by 2. e.g. to double the coin counter use LDA $0DBF : ASL : STA $0DBF.
+0A	2	1	ASL{Multiply A by 2. e.g. to double the coin counter use LDA $0DBF : ASL : STA $0DBF.
+0B	4	1	PHD{Push the direct page register.
+0C	6	3	TSB $xxxx{The opposite of TRB. It will set a bit on a 16-bit address.
+0D	4	3	ORA $xxxx{Performs the logical operator OR on a 16-bit address.
+0E	6	3	ASL $xxxx{Multiples the address specified by 2.
+0F	5	4	ORA $xxxxxx{Performs the logical operator OR on a 24-bit address.
+10	2	2	BPL Label{Branch if plus. Branches iF A is from 00-7F (negative flag clear.
+10	2	2	BPL $xx{Branch if plus. Branches iF A is from 00-7F (negative flag clear.
+10	2	2	BPL{Branch if plus. Branches iF A is from 00-7F (negative flag clear.
+11	5	2	ORA ($xx),Y{
+12	5	2	ORA ($xx){
+13	7	2	ORA ($xx,S),Y{
+14	5	2	TRB $xx{The opposite of TSB. It will clear a bit. LDA #$80 : TRB $1F2C will clear bit 8 of $1F2C.
+15	4	2	ORA $xx,X{Performs the logical operator OR on the value of the RAM Address specified, which is indexed by X.
+16	6	2	ASL $xx,X{Performs the logical operator AND on the value of the RAM Address specified, which is indexed by X.
+17	6	2	ORA [$xx],Y{
+18	2	1	CLC{Clear carry flag. Often used before ADC.
+19	4	3	ORA $xxxx,Y{Performs the logical operator OR on the value of the RAM Address specified, which is indexed by T.
+1A	2	1	INC A{Increase the value of the RAM Address in A by 1.
+1A	2	1	INC{Increase the value of the RAM Address in A by 1.
+1B	2	1	TCS{Transfer the accumulator to the stack.
+1C	6	3	TRB $xxxx{TRB is the opposite of TSB, it will clear a bit. e.g. LDA #$80 : TRB $1F2C will clear bit 8 of $1F2C.
+1D	4	3	ORA $xxxx,X{Performs the logical operator OR on the value of the RAM Address specified, which is indexed by X.
+1E	7	3	ASL $xxxx,X{Performs the logical operator AND on the value of the RAM Address specified, which is indexed by X.
+1F	5	4	ORA $xxxxxx,X{Performs the logical operator OR on the value of the RAM Address specified, which is indexed by X.
+20	6	3	JSR $xxxx{Jumps to a routine within the same bank, executes its code and then returns to where the JSR was. The routine must end in an RTS.
+20	6	3	JSR Label{Jumps to a routine within the same bank, executes its code and then returns to where the JSR was. The routine must end in an RTS.
+20	6	3	JSR{Jumps to a routine within the same bank, executes its code and then returns to where the JSR was. The routine must end in an RTS.
+21	6	2	AND ($xx,X){Performs the logical operator AND on a 8-bit address indexed by X.
+22	8	4	JSL $xxxxxx{Jumps to a specific label or ROM Address which can be outside the current bank.
+22	8	4	JSR $xxxxxx{Jumps to a specific label or ROM Address which can be outside the current bank.
+22	8	4	JSL Label{Jumps to a specific label or ROM Address which can be outside the current bank.
+23	4	2	AND $xx,S{
+24	3	2	BIT $xx{Performs the logical operator AND on the value specified with the one in A. This does not affect the processor flags.
+25	3	2	AND $xx{Performs the logical operator AND on the value specified with the one in A.
+26	5	2	ROL $xx{Rotates the bits of the byte to the left, any bits moved off the most significant bit are restored to the right.
+27	6	2	AND [$xx]{
+28	4	1	PLP{Pull the nvmxdizc register.
+29	2	A	AND #$xx{Performs the logical operator AND on the value specified with the value in A.
+29	3	A	AND #$xxxx{Performs the logical operator AND on the value specified with the value in A.
+2A	2	1	ROL A{Rotates the bits of the byte to the left, any bits moved off the most significant bit are restored to the right.
+2A	2	1	ROL{Rotates the bits of the byte to the left, any bits moved off the most significant bit are restored to the right.
+2B	5	1	PLD{Pull direct register bank.
+2C	4	3	BIT $xxxx{Peforms the logical operator AND on the address specified. Does not affect processor flags.
+2D	4	3	AND $xxxx{Peforms the logical operator AND on the address specified.
+2E	6	3	ROL $xxxx{Rotates the bits to the left on the 16-bit address specified.
+2F	5	4	AND $xxxxxx{Performs the logical operator AND on the 24-bit address specified.
+30	2	2	BMI Label{Branch if minus. Branches iF A is from 80-FF (negative flag set.
+30	2	2	BMI $xx{Branch if minus. Branches iF A is from 80-FF (negative flag set.
+30	2	2	BMI{Branch if minus. Branches iF A is from 80-FF (negative flag set.
+31	5	2	AND ($xx),Y{
+32	5	2	AND ($xx){
+33	7	2	AND ($xx,S),Y{
+34	4	2	BIT $xx,X{Performs the logical operator AND on the address which is indexed by X.
+35	4	2	AND $xx,X{Performs the logical operator AND on the address which is indexed by X.
+36	6	2	ROL $xx,X{Rotates the bits in the address indexed by X to the left.
+37	6	2	AND [$xx],Y{
+38	2	1	SEC{Set the carry flag. Often used before SBC.
+39	4	3	AND $xxxx,Y{Performs the logical operator AND on the address which is indexed by Y.
+3A	2	1	DEC A{Decrease the value of the RAM Address in A by 1.
+3A	2	1	DEC{Decrease the value of the RAM Address in A by 1.
+3B	2	1	TSC{Transfter the stack to the accumulator.
+3C	4	3	BIT $xxxx,X{Performs the logical operator AND on the address which is indexed by X. This does not affect the processor flags.
+3D	4	3	AND $xxxx,X{Performs the logical operator AND on the address which is indexed by X.
+3E	7	3	ROL $xxxx,X{
+3F	5	4	AND $xxxxxx,X{Performs AND on the 24-bit address indexed by X.
+40	6	1	RTI{Return from interrupt.
+41	6	2	EOR ($xx,X){Performs the logical operator XOR on the address specified which is indexed by X.
+42	?	1	WDM{Lolwut?
+43	4	2	EOR $xx,S{Performs the logical operator XOR on the value of the RAM Address which is indexed by the value in the stack.
+44	1	3	MVP $xx,$xx{Block move positive, unlike MVN the source address is greater than the destination. Also MVP $xx,$xx.
+44	1	3	MVP $xxxx{Block move positive, unlike MVN the source address is greater than the destination. Also MVP $xx,$xx.
+45	3	2	EOR $xx{Performs the logical operator XOR on the RAM address.
+46	5	2	LSR $xx{Divides a RAM Address by 2 by performing right shift of the bits in the byte.
+47	6	2	EOR [$xx]{
+48	3	1	PHA{Push A onto the stack.
+49	2	A	EOR #$xx{Performs the logical operator XOR on the value specified.
+49	3	A	EOR #$xxxx{Performs the logical operator XOR on the value specified.
+4A	2	1	LSR A{Divide A by 2, by performing right shift of the bits.
+4A	2	1	LSR{Divide A by 2, by performing right shift of the bits.
+4B	3	1	PHK{Push program bank register.
+4C	3	3	JMP Label{Jump to an address, does not return unlike JSR/JSL.
+4C	3	3	JMP $xxxx{Jump to an address, does not return unlike JSR/JSL.
+4C	3	3	JMP{Jump to an address, does not return unlike JSR/JSL.
+4D	4	3	EOR $xxxx{Performs the logical operator XOR on the address.
+4E	6	3	LSR $xxxx{Will divide RAM Address $xxxx by 2.
+4F	5	4	EOR $xxxxxx{Performs the logical operator XOR on the 24-bit address.
+50	2	2	BVC Label{Branches if the overflow flag is clear.
+50	2	2	BVC $xx{Branches if the overflow flag is clear.
+50	2	2	BVC{Branches if the overflow flag is clear.
+51	5	2	EOR ($xx),Y{
+52	5	2	EOR ($xx){
+53	7	2	EOR ($xx,S),Y{
+54	1	3	MVN $xxxx{Block move from source bank to destination bank. Also MVN $xx,$xx.
+55	4	2	EOR $xx,X{Performs the logical operator XOR on the address which is indexed by X.
+56	6	2	LSR $xx,X{Divides the address indexed by X by 2, by shifting the bits to the left.
+57	6	2	EOR [$xx],Y{
+58	2	1	CLI{Clear the interrupt flag.
+59	4	3	EOR $xxxx,Y{Performs the logical operator XOR on the address which is indexed by Y.
+5A	3	1	PHY{Push Y onto the stack.
+5B	2	1	TCD{Transfer 16-bit Accumulator to Direct Page Register.
+5C	4	4	JML $xxxxxx{Jumps to a location within a bank, JMP $xxxxxx will jump to a location which can be outside the bank.
+5C	4	4	JMP $xxxxxx{Jumps to a location within a bank, JMP $xxxxxx will jump to a location which can be outside the bank.
+5C	4	4	JML Label{Jumps to a location within a bank, JMP $xxxxxx will jump to a location which can be outside the bank.
+5C	4	4	JML{Jumps to a location within a bank, JMP $xxxxxx will jump to a location which can be outside the bank.
+5D	4	3	EOR $xxxx,X{
+5E	7	3	LSR $xxxx,X{Divide the address indexed by X specified by 2, by performing right shift of the bits.
+5F	5	4	EOR $xxxxxx,X{
+60	6	1	RTS{Return from subroutine long. Used to end code. This is used by levelASM, routines called by JSR, often .bin blocks and subroutines by sprites.
+61	6	2	ADC ($xx,X){
+62	6	3	PER $xxxx{
+63	4	2	ADC $xx,S{
+64	3	2	STZ $xx{Sets 0 to the RAM Address specified.
+65	3	2	ADC $xx{Adds $xx to the value in A, often preceeded by CLC.
+66	5	2	ROR $xx{Much like shift right except any bits moved off the least significant are restored to the left.
+67	6	2	ADC [$xx]{
+68	4	1	PLA{Pull A from the stack.
+69	2	A	ADC #$xx{Adds the value specified to that in A, often preceeded by CLC.
+69	3	A	ADC #$xxxx{Adds the value specified to that in A, often preceeded by CLC.
+6A	2	1	ROR A{Much like shift right except any bits moved off the least significant are restored to the left.
+6A	2	1	ROR{Much like shift right except any bits moved off the least significant are restored to the left.
+6B	6	1	RTL{Return from subroutine long. Used to end code. This is used in BTSD ASM blocks, routines called by JSL and sprite MAIN and INIT routines.
+6C	5	3	JMP ($xxxx){
+6D	4	3	ADC $xxxx{Adds the contents of the RAM Address specified to A.
+6E	6	3	ROR $xxxx{
+6F	5	4	ADC $xxxxxx{Adds the contents of the RAM Address specified to A.
+70	2	2	BVS Label{Branches if overflow flag is set.
+71	5	2	ADC ($xx),Y{
+72	5	2	ADC ($xx){
+73	7	2	ADC ($xx,S),Y{
+74	4	2	STZ $xx,X{
+75	4	2	ADC $xx,X{
+76	6	2	ROR $xx,X{
+77	6	2	ADC [$xx],Y{
+78	2	1	SEI{Set interrupt disable flag.
+79	4	3	ADC $xxxx,Y{
+7A	4	1	PLY{Pull Y from the stack.
+7B	2	1	TDC{Transfer Direct Page Register to 16-bit Accumulator.
+7C	6	3	JMP ($xxxx,X){
+7D	4	3	ADC $xxxx,X{
+7E	7	3	ROR $xxxx,X{
+7F	5	4	ADC $xxxxxx,X{
+80	3	2	BRA Label{Branch always. It will always branch. Range is 128 bytes.
+80	3	2	BRA $xx{Branch always. It will always branch. Range is 128 bytes.
+80	3	2	BRA{Branch always. It will always branch. Range is 128 bytes.
+81	6	2	STA ($xx,X){
+82	4	3	BRL Label{Branch always like BRA, but it has a longer range (0-65535 bytes).
+82	4	3	BRL $xxxx{Branch always like BRA, but it has a longer range (0-65535 bytes).
+82	4	3	BRL{Branch always like BRA, but it has a longer range (0-65535 bytes).
+83	4	2	STA $xx,S{
+84	3	2	STY $xx{Store the value in Y to the 8-bit address specified.
+85	3	2	STA $xx{Store the value in A to the 8-bit address specified.
+86	3	2	STX $xx{Store the value in X to the 8-bit address specified.
+87	6	2	STA [$xx]{
+88	2	1	DEY{Decrease the contents of Y by 1.
+89	2	A	BIT #$xx{Performs the logical operator AND on the value specified, because the processor flags are not modified.
+89	3	A	BIT #$xxxx{Performs the logical operator AND on the value specified, because the processor flags are not modified.
+8A	2	1	TXA{Transfer the contents of X to A.
+8B	3	1	PHB{Push data bank register.
+8C	4	3	STY $xxxx{Stores the value of Y into the 16-bit address.
+8D	4	3	STA $xxxx{Stores the value of A into the 16-bit address.
+8E	4	3	STX $xxxx{Stores the value of X into the 16-bit address.
+8F	5	4	STA $xxxxxx{Stores the value of A into the 24-bit address.
+90	2	2	BCC Label{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+90	2	2	BCC $xx{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+90	2	2	BCC{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+90	2	2	BLT Label{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+90	2	2	BLT $xx{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+90	2	2	BLT{Branches if value in Accumulator is less than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCC Branch will branch if you have less than 20 coins.
+91	6	2	STA ($xx),Y{
+92	5	2	STA ($xx){
+93	7	2	STA ($xx,S),Y{
+94	4	2	STY $xx,X{Stores the value of Y into the 8-bit address which is indexed by X.
+95	4	2	STA $xx,X{Stores the value of A into the 8-bit address which is indexed by X.
+96	4	2	STX $xx,Y{Stores the value of X into the 8-bit address which is indexed by Y.
+97	6	2	STA [$xx],Y{
+98	2	1	TYA{Transfer the contents of Y to A.
+99	5	3	STA $xxxx,Y{Stores the value of A into the 16-bit address which is indexed by Y.
+9A	2	1	TXS{Transfer Index Register X to Stack Pointer.
+9B	2	1	TXY{Transfer the contents of X to Y.
+9C	4	3	STZ $xxxx{Sets 0 to the address specified, e.g. STZ $0DBF will set $0DBF to 0.
+9D	5	3	STA $xxxx,X{Stores the value in A to the 16-bit address indexed by X.
+9E	5	3	STZ $xxxx,X{Stores zero to the 16-bit address indexed by X, e.g. LDX $02 : STZ $0DBA,x will set $0DBC to 0.
+9F	5	4	STA $xxxxxx,X{Stores the value in A to the 24-bit address indexed by X.
+A0	2	X	LDY #$xx{Loads a value into Y, e.g. LDA #$FF or LDA #$0100.
+A0	3	X	LDY #$xxxx{Loads a value into Y, e.g. LDA #$FF or LDA #$0100.
+A1	6	2	LDA ($xx,X){
+A2	2	X	LDX #$xx{Loads a value into X, e.g. LDX #$FF or LDX #$0100.
+A2	3	X	LDX #$xxxx{Loads a value into X, e.g. LDX #$FF or LDX #$0100.
+A3	4	2	LDA $xx,S{Loads a value into X indexed by the value in the stack.
+A4	3	2	LDY $xx{Loads an 8-bit address into Y, e.g. LDY $70.
+A5	3	2	LDA $xx{Loads an 8-bit address into A, e.g. LDA $7F.
+A6	3	2	LDX $xx{Loads an 8-bit address into X, e.g. LDX $10.
+A7	6	2	LDA [$xx]{
+A8	2	1	TAY{Transfer the contents of A to Y.
+A9	2	A	LDA #$xx{Loads a value into A, e.g. LDA #$FF or LDA #$0100.
+A9	3	A	LDA #$xxxx{Loads a value into A, e.g. LDA #$FF or LDA #$0100.
+AA	2	1	TAX{Transfer the contents of A to X.
+AB	4	1	PLB{Pull data bank register.
+AC	4	3	LDY $xxxx{Loads the 16-bit address into Y.
+AD	4	3	LDA $xxxx{Loads the 16-bit address into A.
+AE	4	3	LDX $xxxx{Loads the 16-bit address into X.
+AF	5	4	LDA $xxxxxx{Loads the 24-bit address into A.
+B0	2	2	BCS Label{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B0	2	2	BCS $xx{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B0	2	2	BCS{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B0	2	2	BGE Label{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B0	2	2	BGE $xx{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B0	2	2	BGE{Branches if value in Accumulator is more than equal to what is compared. Use a symbol right after it, e.g. LDA $0DBF : CMP #20 : BCS Branch will branch if you have more than 20 coins.
+B1	5	2	LDA ($xx),Y{
+B2	5	2	LDA ($xx){
+B3	7	2	LDA ($xx,S),Y{
+B4	4	2	LDY $xx,X{Loads the 8-bit address indexed by X into Y.
+B5	4	2	LDA $xx,X{Loads the 8-bit address indexed by X into A.
+B6	4	2	LDX $xx,Y{Loads the 8-bit address indexed by Y into X.
+B7	6	2	LDA [$xx],Y{
+B8	2	1	CLV{Clears the overflow flag.
+B9	4	3	LDA $xxxx,Y{Loads the 16-bit address which is indexed by Y.
+BA	2	1	TSX{Transfers the stack pointer onto X.
+BB	2	1	TYX{Transfers the contents of Y to X.
+BC	4	3	LDY $xxxx,X{Loads the RAM Address specified indexed by X into Y.
+BD	4	3	LDA $xxxx,X{Loads the RAM Address specified indexed by X into A.
+BE	4	3	LDX $xxxx,Y{Loads the RAM Address specified indexed by Y into X.
+BF	5	4	LDA $xxxxxx,X{Loads the 24-bit RAM Address specified indexed by X into A.
+C0	2	X	CPY #$xx{Compares the value in Y with the value specified.
+C0	3	X	CPY #$xxxx{Compares the value in Y with the value specified.
+C1	6	2	CMP ($xx,X){
+C2	3	2	REP #$xx{Go into 16-bit mode.
+C2	3	2	REP{Go into 16-bit mode.
+C3	4	2	CMP $xx,S{Compares the value in A with the value specified, indexed by the value in the stack.
+C4	3	2	CPY $xx{Compares the value in Y with the value of the RAM Address specified.
+C5	3	2	CMP $xx{Compares the value in A with the value of the RAM Address specified.
+C6	5	2	DEC $xx{Decrease the value of the RAM Address in the accumulator.
+C7	6	2	CMP [$xx]{
+C8	2	1	INY{Increase the contents of the RAM Address in Y by 1.
+C9	2	A	CMP #$xx{Compare the value in the accumulator with the value specified, often succeeded by a branching command.
+C9	3	A	CMP #$xxxx{Compare the value in the accumulator with the value specified, often succeeded by a branching command.
+CA	2	1	DEX{Decrease the contents of X by one. e.g. LDX $7FAB10 : DEX : STA $7FAB10
+CB	3	1	WAI{Wait for interrupt.
+CC	4	3	CPY $xxxx{Compares the value of Y with the value in the 24-bit address specified.
+CD	4	3	CMP $xxxx{Compares the value of A with the value in the 16-bit address specified.
+CE	6	3	DEC $xxxx{Decrease the contents of the 16-bit address specified by one.
+CF	5	4	CMP $xxxxxx{Compares the value of A with the value in the 24-bit address specified.
+D0	2	2	BNE Label{Branches if the value in A is NOT equal to the value specified, e.g. LDA $0DBF : CMP #$05 : BNE Branch will branch if the value in A is not 5.
+D0	2	2	BNE $xx{Branches if the value in A is NOT equal to the value specified, e.g. LDA $0DBF : CMP #$05 : BNE Branch will branch if the value in A is not 5.
+D0	2	2	BNE{Branches if the value in A is NOT equal to the value specified, e.g. LDA $0DBF : CMP #$05 : BNE Branch will branch if the value in A is not 5.
+D1	5	2	CMP ($xx),Y{
+D2	5	2	CMP ($xx){
+D3	7	2	CMP ($xx,S),Y{
+D4	6	2	PEI ($xx){Pushes a 16-bit value from the indirect address of the operand.
+D5	4	2	CMP $xx,X{Compares the value in A with the address specified which is indexed by X.
+D6	6	2	DEC $xx,X{Decreases the address specified which is indexed by X by 1.
+D7	6	2	CMP [$xx],Y{
+D8	2	1	CLD{Clear decimal flag.
+D9	4	3	CMP $xxxx,Y{Compares the value in A with the address specified, which is indexed by X.
+DA	3	1	PHX{Push X onto the stack.
+DB	3	1	STP{Stop the clock, AKA freeze the game.
+DC	6	3	JML [$xxxx]{
+DC	6	3	JMP [$xxxx]{
+DD	4	3	CMP $xxxx,X{Compares the value in A indexed by X with the contents of the RAM specified, indexed by X.
+DE	7	3	DEC $xxxx,X{Decrease the value of the address indexed by X by 1.
+DF	5	4	CMP $xxxxxx,X{
+E0	2	X	CPX #$xx{Compare the value in X with the value specified, often succeeded by a branching command.
+E0	3	X	CPX #$xxxx{Compare the value in X with the value specified, often succeeded by a branching command.
+E1	6	2	SBC ($xx,X){
+E2	3	2	SEP #$xx{Go back into 8-bit mode.
+E2	3	2	SEP{Go back into 8-bit mode.
+E3	4	2	SBC $xx,S{Subtract the 8-bit address indexed by the value in the stack.
+E4	3	2	CPX $xx{Compare the value in X with the RAM Address specified, often succeeded by a branching command.
+E5	3	2	SBC $xx{Subtracts from the 8-bit address specified.
+E6	5	2	INC $xx{Increase the value of an 8-bit RAM Address, e.g. INC $94.
+E7	6	2	SBC [$xx]{
+E8	2	1	INX{Increase the RAM Address in X by 1.
+E9	2	A	SBC #$xx{Subtract from an 8-bit or 16-bit address. e.g. LDA $0DBF : SEC : SBC #$10 : STA $0DBF will subtract 10 from $0DBF.
+E9	3	A	SBC #$xxxx{Subtract from an 8-bit or 16-bit address. e.g. LDA $0DBF : SEC : SBC #$10 : STA $0DBF will subtract 10 from $0DBF.
+EA	2	1	NOP{No operation, wastage of cycles.
+EB	3	1	XBA{Flips the the lower byte of the 16-bit address with the higher byte. (e.g if A = $1815, XBA makes it 1518).
+EC	4	3	CPX $xxxx{Compare the value of the 16-bit address in the accumulator with the value of the RAM Address specified.
+ED	4	3	SBC $xxxx{Subtract the specified 16-bit address.
+EE	6	3	INC $xxxx{Increase the contents of the 16-bit address by 1.
+EF	5	4	SBC $xxxxxx{Subtracts from the contents of the 24-bit address specified.
+F0	2	2	BEQ $xx{Jumps to the address/label specified if the value in A is equal to that being compared with. e.g. LDA $0DBF : CMP #$10 : BEQ Branch will branch if $0DBF is equal to 10.
+F0	2	2	BEQ Label{Jumps to the address/label specified if the value in A is equal to that being compared with. e.g. LDA $0DBF : CMP #$10 : BEQ Branch will branch if $0DBF is equal to 10.
+F0	2	2	BEQ{Jumps to the address/label specified if the value in A is equal to that being compared with. e.g. LDA $0DBF : CMP #$10 : BEQ Branch will branch if $0DBF is equal to 10.
+F1	5	2	SBC ($xx),Y{
+F2	5	2	SBC ($xx){
+F3	7	2	SBC ($xx,S),Y{
+F4	5	3	PEA $xxxx{Pushes a 16 bit address onto the stack, e.g. PEA $0105.
+F5	4	2	SBC $xx,X{Subtracts the value of the RAM Address specified which is indexed by X.
+F6	6	2	INC $xx,X{Increase the contents of the specified RAM Address indexed by X.
+F7	6	2	SBC [$xx],Y{
+F8	2	1	SED{Set the decimal flag.
+F9	4	3	SBC $xxxx,Y{Subtract a 16-bit address indexed by Y.
+FA	4	1	PLX{Pull X from the stack.
+FB	2	1	XCE{Exchange Carry and Emulation Flags.
+FC	8	3	JSR ($xxxx,X){Jumps to a 16-bit address indexed by X within the same bank.
+FD	4	3	SBC $xxxx,X{Subtract a 16-bit address indexed by X.
+FE	7	3	INC $xxxx,X{Increase a 16-bit address indexed by X.
+FF	5	4	SBC $xxxxxx,X{Subtract a 24-bit address indexed by X.
+
+POSES
+
+00 = Standing normal
+01 = Walking A
+02 = Walking B
+03 = Looking up
+04 = Standing w/ arms out (like an airplane)
+05 = Walking w/ arms out A
+06 = Walking w/ arms out B
+07 = Standing while holding item
+08 = Walking while holding item A
+09 = Walking while holding item B
+0A = Looking up while holding item
+0B = Jumping up
+0C = Flying
+0D = Skidding to a stop
+0E = Kicking
+0F = Looking at the screen
+10 = Walking, tilted at a 45 degree angle
+11 = Standing, tilted at a 90 degree angle
+12 = Walking, 90-degree tilt A
+13 = Walking, 90-degree tilt B
+14 = Sitting while doing the victory hands (I think it's Mario's victory pose while on Yoshi)
+15 = Climbing, facing away from the screen
+16 = Swimming A
+17 = Swimming B
+18 = Swimming C
+19 = Swimming D
+1A = Swimming E
+1B = Swimming F
+1C = Sitting on ground
+1D = Ducking while holding item
+1E = Climbing, facing away from the screen and punching the wall
+1F = Facing at an angle half-away from the screen and half-sideways
+20 = Sitting while facing sideways (I think it's riding Yoshi)
+21 = Facing at an angle half-towards the screen and half sideways
+22 = Climbing, facing towards the screen
+23 = Climbing, facing towards the screen and punching the wall
+24 = Falling
+25 = Standing while facing away from the screen
+26 = Facing the screen in a victory pose
+27 = Leaning back, facing sideways with arms over head (not sure where this is used... Yoshi maybe?)
+28 = Sitting, facing sideways with arms forward (I think it's when he punches Yoshi to make the tounge go)
+29 = Sitting, facing sideways with arms forward (I think it's when he punches Yoshi to make the tounge go), but the arms are lower down
+2A = Blank
+2B = Blank
+2C = Blank
+2D = Blank
+2E = Blank
+2F = Blank
+30 = Standing, looking shocked, burnt to a crisp (used in castle destruction sequence)
+31 = Standing, looking shocked, burnt to a crisp (used in castle destruction sequence), but his eyes are closed
+32 = Standing normal
+33 = Standing, looking up while halfway facing sideways and halfway facing away from the screen (castle destruction sequence)
+34 = Standing, looking up while halfway facing sideways and halfway facing away from the screen (castle destruction sequence), only he's not looking up (odd... his body is facing sideways but his head is looking away from the screen)
+35 = Walking A
+36 = Leaning back, facing sideways with arms over head (not sure where this is used... Yoshi maybe?)
+37 = Sitting, facing sideways with arms forward (I think it's when he punches Yoshi to make the tounge go)
+38 = Facing away from the screen, but he's much smaller, as if part of his head was cut off and rounded with a scalpel
+39 = Facing away from the screen, but he's much smaller, as if part of his head was cut off and rounded with a scalpel, but he's a little bigger and part of his head is not aligned with the rest of the sprite
+3A = Sitting, facing sideways with arms forward (I think it's when he punches Yoshi to make the tounge go)
+3B = Glitchy
+3C = Ducking
+3D = Standing; Small Mario with a Big Mario head (probably used for growing/shrinking routine)
+3E = Killed
+3F = Big Mario, holding hand out to shoot a fireball
+40 = Blank
+41 = Blank
+42 = Inflated by a P-Balloon
+43 = Big Mario, inflated by a P-Balloon
+44 = Big Mario, facing away from the screen
+45 = Big Mario, facing towards the screen
+46 = Big Mario, standing normal
+47 = Big Mario, walking A
+48 = Glitchy
+49 = Glitchy
+4A = Glitchy
+4B = Big Mario walking A, hands held out like an airplane
+4C = Big Mario walking B, hands held out like an airplane
+4D = Big Mario standing, holding an item
+4E = Glitchy
+4F = Glitchy
+50 = Glitchy
+51 = Glitchy
+52 = Glitchy
+53 = Glitchy
+54 = Glitchy
+55 = Big Mario standing and facing the screen with his arms in front of him
+56 = Glitchy
+57 = Glitchy
+58 = Glitchy
+59 = Glitchy (I think 57, 58 and 59 are Big Mario running up a wall, but they won't display properly otherwise)
+5A = Glitchy
+5B = Big Mario climbing and facing away from the screen
+5C = Glitchy
+5D = Glitchy
+5E = Glitchy
+5F = Glitchy
+60 = Glitchy
+61 = Blank
+62 = Big Mario sitting on the ground
+63 = Big Mario ducking while holding item
+64 = Glitchy
+65 = Big Mario facing halfway away from the screen and halfway sideways
+66 = Glitchy
+67 = Glitchy
+68 = Glitchy
+69 = Glitchy
+6A = Big Mario falling
+6B = Big Mario facing away from the screen with his arms in front of him
+6C = Big Mario's standing victory pose
+6D = Big Mario sitting sideways, one arm in the air and one arm in front of him (probably used while on Yoshi)
+6E = Glitchy
+6F = Glitchy
+70 = Glitchy
+71 = Glitchy
+72 = Glitchy
+73 = Glitchy
+74 = Glitchy
+75 = Glitchy
+76 = Blank
+77 = Big Mario burnt to a crisp with his eyes closed
+78 = Glitchy
+79 = Big Mario looking up while partially facing away from the screen (body still faces sideways) (used in castle destruction sequence, I think)
+7A = Glitchy
+7B = Big Mario leaning back, arms held up as if swinging a giant hammer
+7C = Big Mario holding hands straight above his head, but he's partially sunk into the ground
+7D = Big Mario sitting while holding arms in front of him (I think it's for the hammer castle destruction sequence)
+7E = Big Mario bending over while facing away from the screen O_o
+7F = Big Mario facing away from the screen with arms in front of him
+80 = Glitchy
+81 = Big Mario sitting while holding arms in front of him (I think it's for the hammer castle destruction sequence)
+82 = Glitchy
+83 = Big Mario standing normally
+84 = Glitchy
+85 = Big Mario walking B
+86 = Big Mario looking up
+87 = Big Mario standing with arms held out like an airplane
+88 = Big Mario walking A, arms held out like an airplane
+89 = Big Mario walking B, arms held out like an airplane
+8A = Big Mario standing while holding item
+8B = Big Mario walking A while holding item
+8C = Big Mario walking B while holding item
+8D = Big Mario looking up while holding item
+8E = Glitchy
+8F = Big Mario flying
+90 = Glitchy
+91 = Big Mario kicking
+92 = Big Mario facing the screen with arms in front of him
+93 = Glitchy
+94 = Glitchy
+95 = Glitchy
+96 = Glitchy
+97 = Big Mario sitting while giving the victory sign
+98 = Glitchy
+99 = Glitchy
+9A = Big Mario swimming B
+9B = Big Mario swimming C
+9C = Glitchy
+9D = Glitchy
+9E = Glitchy
+9F = Big Mario sitting on ground
+A0 = Big Mario ducking while holding item
+A1 = Glitchy
+A2 = Big Mario facing halfway away from screen and halfway sideways
+A3 = Big Mario facing sideways in a sitting/climbing pose
+A4 = Glitchy
+A5 = Big Mario facing the screen while climbing
+A6 = Glitchy
+A7 = Big Mario falling
+A8 = Big Mario standing and facing away from screen
+A9 = Big Mario standing in the Victory Pose
+AA = Glitchy
+AB = Glitchy
+AC = Glitchy
+AD = Glitchy
+AE = Glitchy
+AF = Glitchy
+B0 = Glitchy
+B1 = Glitchy
+B2 = Glitchy
+B3 = Mario standing with a shocked look, burnt to a crisp (used in castle destruction sequence)
+B4 = Same as B3, only eyes are closed
+B5 = Some awesome battle pose; appears to be unused in the original game... Big Mario is facing sideways staring ahead with his arm in a ready stance. I would totally use this in a custom sprite routine or whatever. :D
+B6 = Big Mario looking up while facing away-ish from the screen, but his body is still turned sideways
+B7 = Same as B6, only he's not looking up in the air
+B8 = Big Mario leaning back, looking like he's swinging a massive hammer
+B9 = Big Mario with his arms high above his head
+BA = Big Mario sitting with his arms above his head
+	(B8, B9 and BA are probably used in the hammer castle destruction sequence)
+BB = Mario facing away from the screen, bent over... Eeeew!
+BC = Mario standing and facing away from the screen
+BD = Big Mario sitting with his arms above his head
+BE = Blank
+BF = Ducking
+C0 = Glitchy
+C1 = Glitchy
+C2 = Glitchy
+C3 = Glitchy
+C4 = Glitchy
+C5 = Glitchy
+C6 = Glitchy
+C7 = Glitchy
+C8 = Glitchy
+C9 = Glitchy
+CA = Glitchy
+CB = Glitchy
+CC = Glitchy
+CD = Glitchy
+CE = Glitchy
+CF = Glitchy
+D0 = Glitchy
+D1 = Glitchy
+D2 = Glitchy
+D3 = Glitchy
+D4 = Glitchy
+D5 = Glitchy
+D6 = Glitchy
+D7 = Glitchy
+D8 = Glitchy
+D9 = Glitchy
+DA = Glitchy
+DB = Glitchy
+DC = Glitchy
+DD = Glitchy
+DE = Glitchy
+DF = Glitchy
+E0 = Glitchy
+E1 = Glitchy
+E2 = Glitchy
+E3 = Glitchy
+E4 = Glitchy
+E5 = Glitchy
+E6 = Glitchy
+E7 = Glitchy
+E8 = Glitchy
+E9 = Glitchy
+EA = Glitchy
+EB = Glitchy
+EC = Glitchy
+ED = Glitchy
+EE = Glitchy
+EF = Blank
+F0 = Glitchy
+F1 = Blank
+F2 = Glitchy
+F3 = Glitchy
+F4 = Glitchy
+F5 = Glitchy
+F6 = Blank
+F7 = Glitchy
+F8 = Glitchy
+F9 = Glitchy
+FA = Glitchy
+FB = Glitchy
+FC = Glitchy
+FD = Blank
+FE = Blank
+FF = Blank
+
+SOUNDS
+
+--$1DF9--
+00 Nothing
+01 Hit Head
+02 Spin Jump Stomp
+03 Spin Jump Stomp 2
+04 Shrinking, Going Down Pipe
+05 Midway Point Whistle
+06 Low Bounce Sound
+07 Dry Bones Falling Apart
+08 Spin Jump Kill (Bang + 'Tweedledee')
+09 Cape Flying Glide Sound
+0A Get Mushroom
+0B Switch On
+0C Carryable tuning into item at goal?
+0D Get Cape
+0E Swiming Sound
+0F Cape Spin Sound
+10 Cape Flying Spin while in Air
+11 Pause Sound (Music stops)
+12 Pause Sound (Music resumes)
+13 Hit Enemy With Shell
+14 Hit 2nd Enemy With Shell
+15 Hit 3rd Enemy With Shell
+16 Hit 4th Enemy With Shell
+17 Hit 5th Enemy With Shell
+18 Hit 6th Enemy With Shell
+19 Hit 7th Enemy With Shell
+1A Line Guided sprite ticking
+1B Line Guided sprite ticking 2
+1C Yoshi Coin
+1E Balloon Inflating
+1F Wacky sound
+20 Jump on Boss
+21 Low Rumble (Thunder?)
+22 Nothing?
+23 Descending Sound (Sim. to Zelda LTTP jumping from ledge)
+24 ? Nothing
+25 Blargg Growl (Would be great for Beastly sprites!)
+26 Soft Descending Whistle (Fireworks? Would be great for Albatoss!)
+27 Faint low bang
+28 Same as 26, but higher and faster.
+29 bullet Bill bang
+2A Mysterious musical scale
+2B Some kind of faint clicking.
+7F Sounds like the telephone tones before you get connected to the operator :-)
+A6 Time Running Out! (Makes Music Speed Up)
+
+--$1DFA--
+00 Nothing
+01 Mario Jumping
+02 Activates Yoshi Drums
+03 Nothing
+04 Buzz Saw click, Line Guided Sprite
+05 NOTHING!
+
+--$1DFB--
+00 Nothing
+01 Piano
+02 Here we go!
+03 Water Level
+04 Fight Bowser 1
+05 Boss Battle
+06 Cave Drums
+07 Ghost House
+08 Castle
+09 Mario Died (SFX)
+0A Game Over (SFX)
+0B Passed Boss (SFX)
+0C Passed Level (SFX)
+0D Have Star
+0E Direct Coins
+0F Into Keyhole (SFX)
+10 Into Keyhole (SFX)
+11 Zoom In (SFX)
+12 Switch Palace
+13 Welcome! (SFX)
+14 Done Bonus Game (SFX)
+15 Rescue Egg (SFX)
+16 Fight Bowser 2
+17 Bowser Zoom Out (SFX)
+18 Bowser Zoom In (SFX)
+19 Fight Bowser 3
+1A Fight Bowser 4
+1B Bowser Died (SFX)
+1C Princess Kiss ^^ (SFX)
+1D Bowser Interlude (SFX)
+
+--$1DFC--
+00 Nothing?
+01 Coin
+02 Item Popup
+03 Long item popup
+04 Bang, cape sound
+05 1up
+06 Fireball
+07 Something popping out of ground
+08 Boing
+09 Cannon shot
+0A Egg Hatch
+0B getting an already-obtained power-up
+0C item fall
+0D item fall?
+0E scrolling
+0F door opens
+10 door closes
+11 drumroll forever
+12 drumroll end
+13 runaway yoshi
+14 ?
+15 new level appear
+16 castle destroyed
+17 fire
+18 big explosion
+19 small explosion
+1A medium explosion
+1B firey crackle
+1C on/off switch
+1D hurry up
+1E chuck whistle
+1F yoshi
+20 fire
+21 yoshi uses tongue
+22 save prompt
+23 option select or moving on the OW
+24 star about to run out
+25 bang
+26 crackle
+27 fire
+28 bounce off chuck
+29 correct sound
+2A wrong sound
+2B falling sound from fireworks
+2C explosion
+2D fire
+2E fire?
+2F fire?
+30 very short fire sound
+31 fire?
+32 fire?
+33 fire?
+34 fire?
+35 very short fire sound?
+36 snap
+37 step on or kick a goomba
+38 shrink
+39 goal
+3A getting onto Yoshi
+3B dry bones collapses
+3C spin-jump kill
+3D flying
+3E grow
+3F POW activate
+40 long scroll
+41 get cape
+42 bubble
+43 climbing net revolving door
+44 ?
+45 pause
+46 pause?
+47 enemy stomp 1
+48 enemy stomp 2
+49 enemy stomp 3
+4A enemy stomp 4
+4B enemy stomp 5
+4C enemy stomp 6
+4D enemy stomp 7
+4E ?
+4F snap
+50 yoshi coin
+51 hurry up (high pitched)
+52 mario inflates
+53 boss deflates (with end sound)
+54 yoshi spit
+55 ? forever
+56 small bang
+57 ? (weird fall sound of some sort)
+58 something hitting something
+59 ? (gas expulsion)
+5A falling sound (from fireworks?)
+5B firework
+5C falling sound (from fireworks?)
+5D firework?
+5E princess pop-out (at last fight)
+5F ? 2 quick beeps and bangs
+60 ? (a tune made of pops)
+61 bang

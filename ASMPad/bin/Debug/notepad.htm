@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1;charset=windows-1252">
+<link href="ROM_files/smw00000.css" type="text/css" rel="stylesheet">
+
+
+
+<style type="text/css">#cse-search-box input.box { color: #000000; } #paypal-donate-form input { background-color: transparent; }</style><title>SMW Central - RAM Map</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="http://www.smwcentral.net/html/smw.css" type="text/css" rel="stylesheet">
+<style type="text/css">#cse-search-box input.box { color: #000000; } #paypal-donate-form input { background-color: transparent; }</style>
+
+</head>
+<body text="#FFFFFF" link="#99FF99" alink="#99FF99" vlink="#99FF99">
+
+                <td width="16" style="background-image: url('http://smwcentral.net/images/tree_left.gif');"></td>
+
+                <td class="pad text">
+<table cellpadding="0" class="brdr">
+<tr><td colspan="4" class="title border center">Addresses</td></tr>
+
+
+<tr><td class="normal border nowrap">$7E:0000</td><td class="normal border nowrap">16 bytes</td><td class="normal border nowrap">Misc.</td><td class="normal border">Scratch RAM, is and can be used for multiple purposes. (Temporarily preserving a value)<br>
+In SMW (and LM ASM hacks), it includes, but is not excluded to:<br>
+$7E0000 - Xpos Used For Sprite Creation, Low Byte<br>
+$7E0001 - Ypos Used For Sprite Creation, Low Byte<br>
+$7E0003 - Block # from LM Map16 Editor<br>
+$7E0004 - Sprite GFX table - Used for when uploading sprite GFX files to VRAM, also used as high byte for block number<br>
+$7E0008	- Xpos Used For Sprite Creation, High Byte<br>
+$7E0009	- Ypos Used For Sprite Creation, High Byte<br>
+$7E000E	- Used by the game to store the level number briefly while deciding which Level and Sprite Pointers to use (during Overworld-&gt;Level transitions).</td></tr>
+<tr><td class="normal border nowrap">$7E:0010</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Flag</td><td class="normal border">If value is != #$00, run the actual game (otherwise, loop forever). Is set to a non-zero value during NMI.</td></tr>
+<tr><td class="normal border nowrap">$7E:0011</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Flag</td><td class="normal border">Used to distinguish IRQ #1 from IRQ #2's code. (Inside the Morton/Ludwig/Roy room, although it can be used in other areas that run IRQ as well.) #$00 = IRQ #1, #$01 = IRQ #2.</td></tr>
+<tr><td class="normal border nowrap">$7E:0012</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Graphics</td><td class="normal border">Image loader (Value must be divisible by 3).<br>
+Valid values:<br>
+00 - default, uploads from $7F837D<br>
+03 - Title screen<br>
+06 - Overworld border<br>
+09 - Remove text box<br>
+0C - Continue? menu<br>
+0F - Cinema BG: Cookie Mountain<br>
+12 - 1 or 2 Players? menu<br>
+15 - Overworld scroll arrows<br>
+18 - Remove overworld scroll arrows<br>
+1B - Remove various menus<br>
+1E - Save? menu<br>
+21 - Cinema 1, Line 8: (Blank)<br>
+24 - Cinema 1, Line 7: travel to Donut Land.<br>
+27 - Cinema 1, Line 6: Together, they now<br>
+2A - Cinema 1, Line 5: still trapped in an egg.<br>
+2D - Cinema 1, Line 4: Yoshi's friend who is<br>
+30 - Cinema 1, Line 3: castle #1 and rescued<br>
+33 - Cinema 1, Line 2: demented Iggy Koopa in<br>
+36 - Cinema 1, Line 1: Mario has defeated the<br>
+39 - Cinema 2, Line 8: Princess Toadstool?<br>
+3C - Cinema 2, Line 7: What will become of<br>
+3F - Cinema 2, Line 6: Mario in this new world?<br>
+42 - Cinema 2, Line 5: Dome. What traps await<br>
+45 - Cinema 2, Line 4: the underground Vanilla<br>
+48 - Cinema 2, Line 3: memory. The next area is<br>
+4B - Cinema 2, Line 2: castle #2 is now just a<br>
+4E - Cinema 2, Line 1: Morton Koopa Jr. of<br>
+51 - Cinema 3, Line 8: (Blank)<br>
+54 - Cinema 3, Line 7: Green Switches yet?<br>
+57 - Cinema 3, Line 6: you found the Red and<br>
+5A - Cinema 3, Line 5: more difficult. Have<br>
+5D - Cinema 3, Line 4: starting to get much<br>
+60 - Cinema 3, Line 3: #3. Mario's quest is<br>
+63 - Cinema 3, Line 2: Lemmy Koopa of castle<br>
+66 - Cinema 3, Line 1: Mario has triumphed over<br>
+69 - Cinema 4, Line 8: this perplexing forest.<br>
+6C - Cinema 4, Line 7: to solve the puzzle of<br>
+6F - Cinema 4, Line 6: Mario must use his brain<br>
+72 - Cinema 4, Line 5: Illusion lies ahead.<br>
+75 - Cinema 4, Line 4: are over. The Forest of<br>
+78 - Cinema 4, Line 3: symphonies in castle #4<br>
+7B - Cinema 4, Line 2: of composing Koopa<br>
+7E - Cinema 4, Line 1: Ludwig von Koopa's days<br>
+81 - Cinema 5, Line 8: (Blank)<br>
+84 - Cinema 5, Line 7: tasty) Chocolate Island!<br>
+87 - Cinema 5, Line 6: the dangerous (but<br>
+8A - Cinema 5, Line 5: castle #5. Onward to<br>
+8D - Cinema 5, Line 4: end to Roy Koopa of<br>
+90 - Cinema 5, Line 3: Illusion and has put an<br>
+93 - Cinema 5, Line 2: through the Forest of<br>
+96 - Cinema 5, Line 1: Mario found his way<br>
+99 - Cinema 6, Line 8: to the Valley of Bowser.<br>
+9C - Cinema 6, Line 7: appears to be a gateway<br>
+9F - Cinema 6, Line 6: is a sunken ship that<br>
+A2 - Cinema 6, Line 5: now before him. There<br>
+A5 - Cinema 6, Line 4: the challenge that is<br>
+A8 - Cinema 6, Line 3: song. Mario must meet<br>
+AB - Cinema 6, Line 2: #6 has sung her last<br>
+AE - Cinema 6, Line 1: Wendy O. Koopa in castle<br>
+B1 - Cinema 7, Line 8: Dinosaur Land?<br>
+B4 - Cinema 7, Line 7: restore peace to<br>
+B7 - Cinema 7, Line 6: Can Mario rescue her and<br>
+BA - Cinema 7, Line 5: Toadstool is being held.<br>
+BD - Cinema 7, Line 4: Castle where Princess<br>
+C0 - Cinema 7, Line 3: that is left is Bowser's<br>
+C3 - Cinema 7, Line 2: Koopa in castle #7. All<br>
+C6 - Cinema 7, Line 1: Mario has defeated Larry<br>
+C9 - Cinema BG: Underground<br>
+CC - Cinema BG: Chocolate Island<br>
+CF - Cinema FG: Castle<br>
+D2 - Completely black<br>
+D5 - THE END<br>
+D8 - Lakitu et al. enemy names<br>
+DB - Hammer Brother et al. enemy names<br>
+DE - Sumo Brother et al. enemy names<br>
+E1 - Banzai Bill et al. enemy names<br>
+E4 - Dino-Rhino et al. enemy names<br>
+E7 - 3Blargg et al. enemy names<br>
+EA - Rip van Fish et al. enemy names<br>
+ED - Big Boo et al. enemy names<br>
+F0 - Dry Bones et al. enemy names<br>
+F3 - Fishbone et al. enemy names<br>
+F6 - Reznor enemy name<br>
+F9 - Mechakoopas enemy name<br>
+FC - Bowser/Koopa kids enemy names<br>
+FF - Cinema BG: Overworld</td></tr>
+<tr><td class="normal border nowrap">$7E:0013</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Counter</td><td class="normal border">Frame Counter (Increases by 1 each frame)</td></tr>
+<tr><td class="normal border nowrap">$7E:0014</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Counter</td><td class="normal border">"Sprite" frame counter. Stops when sprites are frozen, etc. Basically, a frame counter that only runs when a sprite is running.</td></tr>
+<tr><td class="normal border nowrap">$7E:0015</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">I/O</td><td class="normal border">Controller data 1<br>
+01=Right, 02=Left, 04=Down, 08=Up, 10=Start, 20=Select, 40=Y and X, 80=B and A</td></tr>
+<tr><td class="normal border nowrap">$7E:0016</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">I/O</td><td class="normal border">Controller data 1 (one frame) - Same values as $15</td></tr>
+<tr><td class="normal border nowrap">$7E:0017</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">I/O</td><td class="normal border">Controller data 2 - 10=R, 20=L, 40=X, 80=A</td></tr>
+<tr><td class="normal border nowrap">$7E:0018</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">I/O</td><td class="normal border">Controller data 2 (one frame) - Same values as $17</td></tr>
+<tr><td class="normal border nowrap">$7E:0019</td><td class="normal border nowrap">1 byte</td><td class="normal border nowrap">Player</td><td class="normal border">Powerup. #$00 = Small, #$01 = Big, #$02 = Cape, #$03 = Fire.</td></tr>
+<tr><td class="normal border nowrap">$7E:001A</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 1 X position. Mirror of $210D.</td></tr>
+<tr><td class="normal border nowrap">$7E:001C</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 1 Y position. Mirror of $210E.</td></tr>
+<tr><td class="normal border nowrap">$7E:001E</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 2 X position. Mirror of $210F.</td></tr>
+<tr><td class="normal border nowrap">$7E:0020</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 2 Y position. Mirror of $2110.</td></tr>
+<tr><td class="normal border nowrap">$7E:0022</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 3 X postion. Mirror of $2111.</td></tr>
+<tr><td class="normal border nowrap">$7E:0024</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Hardware mirror</td><td class="normal border">Layer 3 Y position. Mirror of $2112.</td></tr>
+<tr><td class="normal border nowrap">$7E:0026</td><td class="normal border nowrap">2 bytes</td><td class="normal border nowrap">Misc.</td><td class="normal border">Depending on Layer 3 tides being activated or not, it's either:<br>
+<br>
